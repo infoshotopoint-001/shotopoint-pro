@@ -1,0 +1,1 @@
+Shoto Point team content is now rendered by static HTML pages and JavaScript using the Node API at `/api/public/team`. Open the corresponding HTML page through the running Node server. Team profiles are managed in the Admin Control Centre.

@@ -1,0 +1,10 @@
+.env
+.git
+.vscode
+node_modules
+server/node_modules
+uploads
+shoto-point-cache
+shoto-point-news-cache
+*.log
+*.zip

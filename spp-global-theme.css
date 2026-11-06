@@ -1,0 +1,96 @@
+/* SHOTO POINT PRODUCTIONS — shared SYFM visual language
+   Palette: black / green / white with a restrained dark-navy accent. */
+:root {
+  --spp-black: #030504;
+  --spp-black-2: #07100b;
+  --spp-black-3: #0b1510;
+  --spp-green: #00d96b;
+  --spp-green-2: #0a9f50;
+  --spp-green-3: #063d23;
+  --spp-white: #f5f8f6;
+  --spp-muted: #a9b4ae;
+  --spp-navy: #071a2e;
+  --spp-line: rgba(255,255,255,.12);
+  --spp-line-green: rgba(0,217,107,.28);
+  --gold: #00d96b;
+  --gold2: #8effc0;
+  --mint: #8effc0;
+  --green: #00d96b;
+  --green2: #0a9f50;
+  --green3: #063d23;
+  --ink: #030504;
+}
+html { color-scheme: dark; }
+::selection { color:#030504; background:#00d96b; }
+:focus-visible { outline:2px solid #00d96b !important; outline-offset:3px; }
+button, a, input, select, textarea { accent-color:#00d96b; }
+/* Restrained navy is used on menus, overlays and selected panels. */
+.dropdown, .dropdown-menu, .nav-dropdown, .submenu, .menu-dropdown {
+  background:linear-gradient(180deg, rgba(7,26,46,.98), rgba(3,5,4,.98)) !important;
+  border-color:rgba(0,217,107,.38) !important;
+}
+.dropdown a:hover, .dropdown-menu a:hover, .submenu a:hover, .menu-dropdown a:hover {
+  color:#8effc0 !important;
+  background:rgba(0,217,107,.10) !important;
+}
+/* Common dark glass panels across the public pages. */
+.team-nav, .topbar, .mainnav, .spp-main-nav, .market-nav, .room-nav {
+  border-color:rgba(0,217,107,.25) !important;
+}
+/* Make keyboard focus and active navigation visible. */
+.navlinks a[aria-current="page"], .nav-links a.active, .spp-main-nav a.active {
+  color:#8effc0 !important;
+}
+/* Shared Shoto Point preloader, visually matched to the SYFM loader. */
+#spp-global-preloader {
+  position:fixed; inset:0; z-index:2147483000;
+  display:flex; align-items:center; justify-content:center; flex-direction:column;
+  background:radial-gradient(circle at center, #071a2e 0%, #030b10 38%, #030504 76%, #000 100%);
+  opacity:1; visibility:visible; pointer-events:auto;
+  transition:opacity .65s ease, visibility .65s ease;
+}
+#spp-global-preloader.is-hidden { opacity:0; visibility:hidden; pointer-events:none; }
+#spp-global-preloader .spp-loader-orbit {
+  width:88px; height:88px; border:1px solid rgba(0,217,107,.38); border-radius:50%;
+  display:grid; place-items:center; position:relative; margin-bottom:27px;
+  box-shadow:0 0 0 12px rgba(0,217,107,.025), 0 0 48px rgba(0,217,107,.13);
+}
+#spp-global-preloader .spp-loader-orbit::before,
+#spp-global-preloader .spp-loader-orbit::after {
+  content:""; position:absolute; border:2px solid transparent; border-radius:50%;
+}
+#spp-global-preloader .spp-loader-orbit::before {
+  inset:-7px; border-top-color:#00d96b; animation:sppLoaderSpin 1.1s linear infinite;
+}
+#spp-global-preloader .spp-loader-orbit::after {
+  inset:-14px; border-right-color:rgba(255,255,255,.38); animation:sppLoaderSpinReverse 2s linear infinite;
+}
+#spp-global-preloader .spp-loader-mark {
+  color:#f5f8f6; font:900 27px/1 Inter,"Segoe UI",Arial,sans-serif; letter-spacing:3px;
+}
+#spp-global-preloader .spp-loader-mark span { color:#00d96b; }
+#spp-global-preloader .spp-loader-title {
+  color:#f5f8f6; font:800 12px/1.5 Inter,"Segoe UI",Arial,sans-serif;
+  letter-spacing:5px; text-transform:uppercase; text-align:center; padding:0 16px;
+}
+#spp-global-preloader .spp-loader-subtitle {
+  color:#a9b4ae; font:500 10px/1.6 Inter,"Segoe UI",Arial,sans-serif;
+  letter-spacing:2px; margin-top:8px; text-align:center; padding:0 16px;
+}
+#spp-global-preloader .spp-loader-track {
+  width:210px; max-width:65vw; height:2px; margin-top:24px; overflow:hidden;
+  background:rgba(255,255,255,.12);
+}
+#spp-global-preloader .spp-loader-track span {
+  display:block; width:38%; height:100%; background:#00d96b;
+  box-shadow:0 0 14px #00d96b; animation:sppLoaderTrack 1.25s ease-in-out infinite;
+}
+@keyframes sppLoaderSpin { to { transform:rotate(360deg); } }
+@keyframes sppLoaderSpinReverse { to { transform:rotate(-360deg); } }
+@keyframes sppLoaderTrack { 0% { transform:translateX(-120%); } 100% { transform:translateX(360%); } }
+@media (prefers-reduced-motion:reduce) {
+  #spp-global-preloader .spp-loader-orbit::before,
+  #spp-global-preloader .spp-loader-orbit::after,
+  #spp-global-preloader .spp-loader-track span { animation:none; }
+  #spp-global-preloader { transition:none; }
+}

@@ -1,0 +1,10 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--mint:#9fffc9;--text:#edfff5;--muted:#c7e8d7;--line:rgba(0,217,107,.24)}
+body{font-family:Inter,Arial,sans-serif;color:var(--text);background:#03150f;min-height:100vh;overflow-x:hidden}
+.video-bg,.green-overlay{position:fixed;inset:0;z-index:-3}.video-bg video{width:100%;height:100%;object-fit:cover;filter:brightness(.35) saturate(.75)}
+.green-overlay{z-index:-2;background:linear-gradient(125deg,rgba(0,62,39,.9),rgba(0,130,78,.35),rgba(0,15,10,.92));backdrop-filter:blur(3px)}
+.shell{width:min(1120px,90%);margin:auto;padding:35px 0 90px}.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:55px}.brand{color:white;text-decoration:none;font-weight:900;letter-spacing:2px}.brand small{display:block;color:var(--mint);font-size:9px;letter-spacing:4px;margin-top:3px}.back{color:#dfffee;text-decoration:none;border:1px solid var(--line);border-radius:30px;padding:10px 16px}
+.profile{display:grid;grid-template-columns:390px 1fr;gap:55px;align-items:start}.photo{border:1px solid var(--line);border-radius:30px;padding:12px;background:rgba(5,45,31,.5);backdrop-filter:blur(15px);position:sticky;top:25px}.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px;display:block}
+.role{color:var(--mint);font-size:12px;letter-spacing:3px;font-weight:900}.content h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:12px 0 20px}.lead{font-size:19px;line-height:1.8;color:#d9f4e5;margin-bottom:30px}.bio-section{border-top:1px solid var(--line);padding-top:28px;margin-top:28px}.bio-section h2{font-size:24px;margin-bottom:13px}.bio-section p{color:var(--muted);line-height:1.85;margin-bottom:16px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:35px}.btn{display:inline-block;text-decoration:none;padding:13px 18px;border-radius:28px;font-weight:800;border:1px solid var(--line);color:white;background:rgba(255,255,255,.06)}.btn.primary{background:var(--mint);color:#032018;border-color:transparent}
+@media(max-width:850px){.profile{grid-template-columns:1fr}.photo{position:relative;top:auto;max-width:520px;margin:auto}.content{text-align:left}}

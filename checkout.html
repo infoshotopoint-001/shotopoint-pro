@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Secure checkout | Shoto Point</title><link rel="stylesheet" href="customer-flow.css"><link rel="stylesheet" href="/spp-cms-live.css"><link rel="stylesheet" href="spp-global-theme.css">
+</head>
+<body class="payment-page">
+<div id="spp-global-preloader" role="status" aria-live="polite" aria-label="Loading Shoto Point Productions"><div class="spp-loader-orbit"><div class="spp-loader-mark">S<span>P</span></div></div><div class="spp-loader-title">SHOTO POINT PRODUCTIONS</div><div class="spp-loader-subtitle">STORIES · VISIONS · IMPACT</div><div class="spp-loader-track"><span></span></div></div>
+<main class="payment-shell">
+  <section class="payment-summary"><a class="payment-brand" href="index.html"><b>SP</b><span>Shoto Point<small>Production</small></span></a>
+    <div class="order-card"><div class="order-art">SP</div><div><small>YOUR SELECTED ORDER</small><h1 id="itemTitle">Shoto Point order</h1><p id="itemDescription">Your order details appear here when you select a service or product.</p></div></div>
+    <div class="summary-line"><span>Order amount</span><strong id="orderAmount">Set by selected order</strong></div><div class="summary-line"><span>Processing fee</span><strong>₦0</strong></div><div class="summary-total"><span>Total</span><strong id="totalAmount">Set by selected order</strong></div><p class="secure-note">◈ Payments are processed by Paystack’s secure checkout.</p><a class="back-link" href="index.html">← Back to website</a>
+  </section>
+  <section class="payment-form-wrap"><header><span class="badge">SECURE CHECKOUT</span><h2>Choose how to pay</h2><p>Select a payment channel. The selected method will open securely through Paystack.</p></header>
+    <form id="checkoutForm" class="checkout-form"><section class="billing-box"><h3>Buyer email</h3><div class="field"><label for="buyerEmail">Email address</label><input id="buyerEmail" type="email" required placeholder="you@example.com"></div></section><section class="billing-box"><h3>Payment method</h3><div class="channel-grid"><button type="button" class="payment-option" data-channel="card"><span>▣</span><b>Card</b><small>Visa, Mastercard, Verve</small><i></i></button><button type="button" class="payment-option" data-channel="bank"><span>⌁</span><b>Bank transfer</b><small>Pay by bank account</small><i></i></button><button type="button" class="payment-option" data-channel="ussd"><span>ï¼Š</span><b>USSD</b><small>Pay from your mobile bank</small><i></i></button><button type="button" class="payment-option" data-channel="other"><span>◉</span><b>More options</b><small>Supported Paystack channels</small><i></i></button></div><p>Card details, CVV, PIN and OTP are entered only on Paystack’s protected payment page.</p></section><button class="review" id="payButton" type="submit" hidden></button><p class="checkout-status" id="checkoutStatus">Choose a payment channel to continue.</p></form>
+  </section>
+<section id="sppCmsPageContent" class="spp-cms-slot" hidden></section></main><script src="checkout-api.js"></script><script src="/spp-cms-public.js" data-spp-page="checkout"></script><script src="spp-global.js"></script>
+</body></html>
+

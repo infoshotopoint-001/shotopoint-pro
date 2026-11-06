@@ -1,0 +1,5 @@
+SHOTO POINT PRODUCTION — HTML/JS VERSION
+
+The canonical homepage is index.html.
+Start the Node.js server with `npm start` after MySQL and environment settings are configured, then visit http://127.0.0.1:5000/.
+For setup details, read README_HTML_JS.md.

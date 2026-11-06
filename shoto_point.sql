@@ -1,0 +1,109 @@
+CREATE DATABASE IF NOT EXISTS shoto_point CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE shoto_point;
+
+CREATE TABLE IF NOT EXISTS admins (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ admin_id VARCHAR(40) NOT NULL UNIQUE,
+ control_key VARCHAR(40) NOT NULL UNIQUE,
+ first_name VARCHAR(100) NOT NULL,
+ last_name VARCHAR(100) NOT NULL,
+ email VARCHAR(255) NOT NULL UNIQUE,
+ phone VARCHAR(40) NOT NULL,
+ password_hash VARCHAR(255) NOT NULL,
+ status ENUM('active','suspended') NOT NULL DEFAULT 'active',
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS customers (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ email VARCHAR(255) NOT NULL UNIQUE,
+ username VARCHAR(100) NOT NULL UNIQUE,
+ password_hash VARCHAR(255) NOT NULL,
+ first_name VARCHAR(100),
+ last_name VARCHAR(100),
+ phone VARCHAR(40),
+ profile_json JSON NULL,
+ status ENUM('pending','approved','rejected','suspended') NOT NULL DEFAULT 'pending',
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS news_submissions (
+ id VARCHAR(64) PRIMARY KEY,
+ title VARCHAR(255) NOT NULL,
+ content LONGTEXT NOT NULL,
+ type VARCHAR(80),
+ category VARCHAR(80),
+ source VARCHAR(255),
+ region VARCHAR(120),
+ external_url VARCHAR(2000),
+ submitted_by VARCHAR(120),
+ submitter_email VARCHAR(255),
+ status ENUM('pending','approved','rejected') NOT NULL DEFAULT 'pending',
+ approved_by BIGINT UNSIGNED NULL,
+ published_at DATETIME NULL,
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ INDEX idx_news_status_date(status,published_at),
+ CONSTRAINT fk_news_admin FOREIGN KEY(approved_by) REFERENCES admins(id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS content_items (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ section VARCHAR(80) NOT NULL,
+ content_type VARCHAR(40) NOT NULL,
+ title VARCHAR(255) NOT NULL,
+ description TEXT,
+ body LONGTEXT,
+ media_url VARCHAR(2000),
+ download_url VARCHAR(2000),
+ amount DECIMAL(12,2) DEFAULT 0,
+ status ENUM('draft','published','archived') NOT NULL DEFAULT 'draft',
+ scheduled_at DATETIME NULL,
+ created_by BIGINT UNSIGNED NULL,
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ INDEX idx_content_section_status(section,status),
+ CONSTRAINT fk_content_admin FOREIGN KEY(created_by) REFERENCES admins(id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS meeting_registrations (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ registration_id VARCHAR(80) NOT NULL UNIQUE,
+ platform VARCHAR(100) NOT NULL,
+ full_name VARCHAR(180) NOT NULL,
+ email VARCHAR(255) NOT NULL,
+ phone VARCHAR(40),
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS orders (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ reference VARCHAR(100) NOT NULL UNIQUE,
+ email VARCHAR(255) NOT NULL,
+ item_id BIGINT UNSIGNED NOT NULL,
+ item_type VARCHAR(80) NOT NULL,
+ amount DECIMAL(12,2) NOT NULL,
+ status ENUM('pending','paid','failed','cancelled') NOT NULL DEFAULT 'pending',
+ channel VARCHAR(30),
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ INDEX idx_orders_status(status)
+);
+
+CREATE TABLE IF NOT EXISTS transactions (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ reference VARCHAR(100) NOT NULL UNIQUE,
+ amount DECIMAL(12,2) NOT NULL,
+ status VARCHAR(40) NOT NULL,
+ payload JSON NULL,
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS password_resets (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ admin_id BIGINT UNSIGNED NOT NULL,
+ token_hash CHAR(64) NOT NULL UNIQUE,
+ expires_at DATETIME NOT NULL,
+ used_at DATETIME NULL,
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ CONSTRAINT fk_reset_admin FOREIGN KEY(admin_id) REFERENCES admins(id) ON DELETE CASCADE
+);

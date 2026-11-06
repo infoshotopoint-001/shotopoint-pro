@@ -1,0 +1,671 @@
+/* SPP production catalogue. Demo records are not real releases. Replace with approved titles and media. */
+window.SPP_PRODUCTION_CATEGORIES = [
+  {
+    "slug": "film-production",
+    "name": "Film Production",
+    "description": "Feature films, short films and cinematic releases."
+  },
+  {
+    "slug": "television-production",
+    "name": "Television Production",
+    "description": "Series, programmes, TV specials and episodic storytelling."
+  },
+  {
+    "slug": "documentary",
+    "name": "Documentary",
+    "description": "Real people, important subjects and stories worth preserving."
+  },
+  {
+    "slug": "photography",
+    "name": "Photography",
+    "description": "Photo stories, visual essays, campaigns and selected collections."
+  },
+  {
+    "slug": "commercials",
+    "name": "Commercials",
+    "description": "Brand films, television adverts and promotional campaigns."
+  },
+  {
+    "slug": "digital-media",
+    "name": "Digital Media",
+    "description": "Digital-first productions, social video and creative online content."
+  },
+  {
+    "slug": "post-production",
+    "name": "Post Production",
+    "description": "Editing reels, colour, sound, finishing and behind-the-scenes craft."
+  },
+  {
+    "slug": "creative-development",
+    "name": "Creative Development",
+    "description": "Concepts, pitches, scripts, story development and creative showcases."
+  },
+  {
+    "slug": "talent-casting",
+    "name": "Talent & Casting",
+    "description": "Talent showcases, auditions, cast profiles and performance reels."
+  }
+];
+window.SPP_PRODUCTION_LIBRARY = [
+  {
+    "id": "film-production-1",
+    "category": "film-production",
+    "title": "Feature Film Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Film Production library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Film Production",
+      "Preview"
+    ],
+    "poster": "assets/productions/film-production-1.svg",
+    "featured": true,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "film-production-2",
+    "category": "film-production",
+    "title": "Short Film Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Film Production library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Film Production",
+      "Preview"
+    ],
+    "poster": "assets/productions/film-production-2.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "film-production-3",
+    "category": "film-production",
+    "title": "Cinema Showcase",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Film Production library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Film Production",
+      "Preview"
+    ],
+    "poster": "assets/productions/film-production-3.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "television-production-1",
+    "category": "television-production",
+    "title": "TV Series Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Television Production library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Television Production",
+      "Preview"
+    ],
+    "poster": "assets/productions/television-production-1.svg",
+    "featured": true,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "television-production-2",
+    "category": "television-production",
+    "title": "Studio Programme Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Television Production library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Television Production",
+      "Preview"
+    ],
+    "poster": "assets/productions/television-production-2.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "television-production-3",
+    "category": "television-production",
+    "title": "Special Feature Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Television Production library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Television Production",
+      "Preview"
+    ],
+    "poster": "assets/productions/television-production-3.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "documentary-1",
+    "category": "documentary",
+    "title": "People & Places Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Documentary library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Documentary",
+      "Preview"
+    ],
+    "poster": "assets/productions/documentary-1.svg",
+    "featured": true,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "documentary-2",
+    "category": "documentary",
+    "title": "Culture Documentary Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Documentary library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Documentary",
+      "Preview"
+    ],
+    "poster": "assets/productions/documentary-2.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "documentary-3",
+    "category": "documentary",
+    "title": "Real Stories Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Documentary library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Documentary",
+      "Preview"
+    ],
+    "poster": "assets/productions/documentary-3.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "photography-1",
+    "category": "photography",
+    "title": "Portrait Collection Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Photography library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Photography",
+      "Preview"
+    ],
+    "poster": "assets/productions/photography-1.svg",
+    "featured": true,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "photography-2",
+    "category": "photography",
+    "title": "Editorial Frames Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Photography library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Photography",
+      "Preview"
+    ],
+    "poster": "assets/productions/photography-2.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "photography-3",
+    "category": "photography",
+    "title": "Behind the Lens Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Photography library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Photography",
+      "Preview"
+    ],
+    "poster": "assets/productions/photography-3.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "commercials-1",
+    "category": "commercials",
+    "title": "Brand Film Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Commercials library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Commercials",
+      "Preview"
+    ],
+    "poster": "assets/productions/commercials-1.svg",
+    "featured": true,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "commercials-2",
+    "category": "commercials",
+    "title": "Campaign Commercial Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Commercials library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Commercials",
+      "Preview"
+    ],
+    "poster": "assets/productions/commercials-2.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "commercials-3",
+    "category": "commercials",
+    "title": "Product Story Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Commercials library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Commercials",
+      "Preview"
+    ],
+    "poster": "assets/productions/commercials-3.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "digital-media-1",
+    "category": "digital-media",
+    "title": "Digital Series Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Digital Media library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Digital Media",
+      "Preview"
+    ],
+    "poster": "assets/productions/digital-media-1.svg",
+    "featured": true,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "digital-media-2",
+    "category": "digital-media",
+    "title": "Social Video Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Digital Media library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Digital Media",
+      "Preview"
+    ],
+    "poster": "assets/productions/digital-media-2.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "digital-media-3",
+    "category": "digital-media",
+    "title": "Creative Content Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Digital Media library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Digital Media",
+      "Preview"
+    ],
+    "poster": "assets/productions/digital-media-3.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "post-production-1",
+    "category": "post-production",
+    "title": "Editing Reel Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Post Production library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Post Production",
+      "Preview"
+    ],
+    "poster": "assets/productions/post-production-1.svg",
+    "featured": true,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "post-production-2",
+    "category": "post-production",
+    "title": "Colour & Finish Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Post Production library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Post Production",
+      "Preview"
+    ],
+    "poster": "assets/productions/post-production-2.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "post-production-3",
+    "category": "post-production",
+    "title": "Sound Design Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Post Production library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Post Production",
+      "Preview"
+    ],
+    "poster": "assets/productions/post-production-3.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "creative-development-1",
+    "category": "creative-development",
+    "title": "Story Concept Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Creative Development library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Creative Development",
+      "Preview"
+    ],
+    "poster": "assets/productions/creative-development-1.svg",
+    "featured": true,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "creative-development-2",
+    "category": "creative-development",
+    "title": "Script Development Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Creative Development library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Creative Development",
+      "Preview"
+    ],
+    "poster": "assets/productions/creative-development-2.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "creative-development-3",
+    "category": "creative-development",
+    "title": "Production Pitch Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Creative Development library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Creative Development",
+      "Preview"
+    ],
+    "poster": "assets/productions/creative-development-3.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "talent-casting-1",
+    "category": "talent-casting",
+    "title": "Actor Showcase Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Talent & Casting library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Talent & Casting",
+      "Preview"
+    ],
+    "poster": "assets/productions/talent-casting-1.svg",
+    "featured": true,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "talent-casting-2",
+    "category": "talent-casting",
+    "title": "Talent Reel Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Talent & Casting library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Talent & Casting",
+      "Preview"
+    ],
+    "poster": "assets/productions/talent-casting-2.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  },
+  {
+    "id": "talent-casting-3",
+    "category": "talent-casting",
+    "title": "Casting Session Preview",
+    "subtitle": "SPP LIBRARY PREVIEW",
+    "description": "This is a clearly labelled demonstration card for the Talent & Casting library. Replace this information with an approved Shoto Point Production release, its official artwork and media files before publishing.",
+    "year": "—",
+    "publishedAt": "Add publication date",
+    "duration": "Add runtime",
+    "rating": "SPP",
+    "genres": [
+      "Talent & Casting",
+      "Preview"
+    ],
+    "poster": "assets/productions/talent-casting-3.svg",
+    "featured": false,
+    "demo": true,
+    "watchUrl": "",
+    "sources": {},
+    "downloads": {},
+    "youtubeUrl": "",
+    "shareUrl": ""
+  }
+];

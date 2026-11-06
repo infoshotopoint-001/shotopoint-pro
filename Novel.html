@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore novels and written stories from Shoto Point Production. Discover each title, writer, publication date and full reading page.">
+<meta name="theme-color" content="#030504"><title>SPP Novels | Shoto Point Production</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Cinzel:wght@500;600;700;800&display=swap');
+:root{--gold:#00d96b;--gold2:#8effc0;--ink:#050505;--white:#f7f5ef;--muted:#c8c5be;--line:#00d96b60;--panel:#101010}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--white);font:14px/1.6 'DM Sans',sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,select{font:inherit}.shell{width:min(1600px,100%);margin:auto}.gold{color:var(--gold)}
+.topline{min-height:42px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:7px clamp(16px,3vw,44px);border-bottom:1px solid #00d96b26;background:#050505}.brand-note{font-size:12px;letter-spacing:.11em;color:#d2ffe5;text-transform:uppercase;white-space:nowrap}.top-actions{display:flex;align-items:center;gap:15px}.socials{display:flex;gap:12px;align-items:center}.socials a{display:grid;place-items:center;width:24px;height:24px;color:var(--gold2);font-weight:800;border-radius:50%;transition:.2s}.socials a:hover{background:var(--gold);color:#000;transform:translateY(-2px)}.portal-links{display:flex;gap:12px;align-items:center;border-left:1px solid var(--line);padding-left:18px;font-size:12px}.portal-links a:hover{color:var(--gold)}
+.mainnav{position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px clamp(16px,3vw,44px);background:#050505f2;border-bottom:1px solid var(--line)}.logo{display:flex;align-items:center;gap:10px;min-width:245px}.logo-mark{width:54px;height:54px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:Cinzel,serif;font-size:17px;font-weight:800;box-shadow:0 0 18px #00d96b3b,inset 0 0 12px #00d96b24}.logo-word{font-family:Cinzel,serif;font-size:clamp(17px,2vw,25px);line-height:1.05;color:var(--gold2);font-weight:800;letter-spacing:-.04em;text-shadow:0 0 14px #00d96b33}.logo-word small{display:block;text-align:center;letter-spacing:.35em;font:700 10px 'DM Sans',sans-serif;margin-top:5px;color:var(--gold)}.navlinks{display:flex;align-items:center;justify-content:flex-end;gap:clamp(8px,1.2vw,20px);flex-wrap:wrap}.navitem{position:relative}.navlink{display:inline-flex;align-items:center;gap:6px;padding:10px 0;font-size:13px;font-weight:600;white-space:nowrap;transition:.2s}.navlink:hover,.navitem:focus-within>.navlink,.navlink.active{color:var(--gold)}.chev{font-size:10px;color:var(--gold)}.dropdown{display:none;position:absolute;top:100%;left:-14px;min-width:215px;padding:10px;background:#080808f7;border:1px solid var(--gold);box-shadow:0 15px 38px #000b;border-radius:0 0 8px 8px}.navitem:hover .dropdown,.navitem:focus-within .dropdown,.navitem.open .dropdown{display:block}.dropdown strong{display:block;color:var(--gold);padding:8px 10px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.dropdown a{display:block;padding:8px 10px;border-radius:4px;font-size:12px;color:#f4f0e7}.dropdown a:hover{background:#00d96b1a;color:var(--gold2)}.start-btn{border:1px solid var(--gold);padding:10px 15px;border-radius:6px;color:var(--gold2);white-space:nowrap;font-weight:700}.start-btn:hover{background:var(--gold);color:#080808;box-shadow:0 0 20px #00d96b50}.mobile-toggle{display:none;background:none;color:var(--gold);border:1px solid var(--line);padding:8px 11px;border-radius:5px}
+.page-banner{position:relative;isolation:isolate;overflow:hidden;padding:76px clamp(20px,6vw,84px) 68px;text-align:center;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 50% 0%,#00d96b33,transparent 58%),linear-gradient(145deg,#171108,#050505 64%,#100c05)}.page-banner:before{content:"";position:absolute;inset:18px;border:1px solid #00d96b35;pointer-events:none}.eyebrow{color:var(--gold2);letter-spacing:.24em;text-transform:uppercase;font-size:11px;font-weight:800}.page-banner h1{font-family:Cinzel,serif;color:#00d96b;font-size:clamp(38px,6vw,72px);line-height:1.02;margin:17px 0;text-shadow:0 0 28px #00d96b25}.page-banner p{max-width:760px;margin:0 auto;color:#e8e1d3;font-size:clamp(15px,1.5vw,18px)}.section{padding:42px clamp(16px,4vw,55px) 76px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:0 auto 25px;max-width:1450px}.searchbox{flex:1 1 280px;max-width:520px;display:flex;align-items:center;gap:10px;border:1px solid #00d96b3f;background:#0d0d0d;padding:11px 14px;border-radius:7px}.searchbox input{width:100%;border:0;outline:none;background:transparent;color:var(--white);font:inherit}.searchbox input::placeholder{color:#8e8a82}.toolbar-note{color:var(--muted);font-size:12px}.novel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1450px;margin:auto}.novel-card{min-width:0;overflow:hidden;background:linear-gradient(155deg,#151515,#080808);border:1px solid #ffffff24;border-radius:10px;transition:transform .25s,border-color .25s,box-shadow .25s}.novel-card:hover{transform:translateY(-5px);border-color:#00d96ba8;box-shadow:0 15px 35px #0008,0 0 20px #00d96b10}.cover-wrap{position:relative;height:290px;overflow:hidden;background:#18130b}.novel-cover{width:100%;height:100%;display:block;object-fit:cover;transition:transform .4s;filter:saturate(.88)}.novel-card:hover .novel-cover{transform:scale(1.035)}.cover-shade{position:absolute;inset:25% 0 0;background:linear-gradient(transparent,#000c);pointer-events:none}.demo-badge{position:absolute;top:13px;left:13px;padding:5px 8px;background:#080808dd;border:1px solid #00d96b6e;color:var(--gold2);font-size:9px;font-weight:800;letter-spacing:.12em;border-radius:4px}.novel-card-body{padding:19px}.novel-meta{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap;color:#aaa;font-size:11px;margin-bottom:10px}.novel-meta span:first-child{color:var(--gold)}.novel-card h2{font-family:Cinzel,serif;font-size:23px;line-height:1.2;color:var(--gold2);margin:0 0 10px}.novel-author{color:#ded7ca;font-size:12px;margin-bottom:10px}.novel-desc{color:var(--muted);font-size:13px;min-height:63px;margin:0 0 17px}.card-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid #ffffff17;padding-top:15px}.genre{font-size:10px;color:#b1aba0;letter-spacing:.06em;text-transform:uppercase}.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:10px 15px;border-radius:6px;border:1px solid var(--gold);background:#080808;color:var(--gold2);cursor:pointer;font-weight:700;transition:.2s}.btn:hover{background:var(--gold);color:#080808}.btn.primary{background:var(--gold);color:#080808}.btn.primary:hover{background:var(--gold2)}.empty-state{max-width:800px;margin:30px auto;padding:35px;text-align:center;border:1px dashed #00d96b4d;border-radius:10px;color:var(--muted)}.footer{padding:30px clamp(20px,4vw,50px);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#aaa;font-size:12px}.footer b{color:var(--gold2)}.site-note{margin:22px auto 0;max-width:1450px;padding:13px 15px;border:1px solid #00d96b28;background:#0d0d0d;color:#aaa;font-size:11px;border-radius:6px}.site-note strong{color:var(--gold2)}
+@media(max-width:1100px){.logo{min-width:0}.navlinks{gap:11px}.navlink{font-size:12px}.novel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cover-wrap{height:260px}}
+@media(max-width:850px){.topline{align-items:flex-start}.brand-note{white-space:normal}.mainnav{flex-wrap:wrap}.mobile-toggle{display:block;margin-left:auto}.navlinks{display:none;flex-basis:100%;align-items:stretch;flex-direction:column;gap:0;padding-top:10px}.navlinks.mobile-open{display:flex}.navitem{border-top:1px solid #ffffff15}.navlink{width:100%;justify-content:space-between;padding:12px 3px}.dropdown{position:static;box-shadow:none;border-radius:5px;margin-bottom:10px;width:100%;min-width:0}.start-btn{display:inline-block;margin:10px 0}}
+@media(max-width:600px){.topline{flex-direction:column;gap:8px}.top-actions{width:100%;justify-content:space-between}.logo-mark{width:45px;height:45px}.logo-word{font-size:17px}.page-banner{padding:58px 20px}.novel-grid{grid-template-columns:1fr;max-width:470px}.cover-wrap{height:300px}.section{padding-top:30px}.novel-desc{min-height:0}}
+
+.catalogue-intro{max-width:1450px;margin:0 auto 30px;display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap}.catalogue-intro h2{font-family:Cinzel,serif;color:var(--gold2);font-size:clamp(25px,3vw,38px);margin:0 0 7px}.catalogue-intro p{max-width:700px;color:var(--muted);margin:0}.count-pill{border:1px solid var(--line);padding:8px 12px;border-radius:999px;color:var(--gold2);font-size:12px;white-space:nowrap}
+</style>
+<link rel="stylesheet" href="/spp-cms-live.css"><link rel="stylesheet" href="spp-global-theme.css">
+</head>
+<body>
+<div id="spp-global-preloader" role="status" aria-live="polite" aria-label="Loading Shoto Point Productions"><div class="spp-loader-orbit"><div class="spp-loader-mark">S<span>P</span></div></div><div class="spp-loader-title">SHOTO POINT PRODUCTIONS</div><div class="spp-loader-subtitle">STORIES · VISIONS · IMPACT</div><div class="spp-loader-track"><span></span></div></div>
+
+<div class="shell">
+<div class="topline">
+  <div class="brand-note">Film <span class="gold">/</span> Television <span class="gold">/</span> Storytelling</div>
+  <div class="top-actions">
+    <div class="socials" aria-label="Social media">
+      <a href="#social" aria-label="YouTube">▶</a><a href="#social" aria-label="Facebook">f</a><a href="#social" aria-label="Instagram">◎</a><a href="#social" aria-label="X">𝕏</a><a href="#social" aria-label="TikTok">♪</a>
+    </div>
+    <div class="portal-links"><a href="MemberShip.html">♙ Sign Up</a><span class="gold">|</span><a href="Adminlogin.html">Admin</a></div>
+  </div>
+</div>
+<header class="mainnav">
+  <a class="logo" href="index.html" aria-label="Shoto Point Production home"><span class="logo-mark">SP</span><span class="logo-word">SHOTO POINT<small>PRODUCTION</small></span></a>
+  <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="navlinks">☰ Menu</button>
+  <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+    <a class="navlink" href="index.html">Home</a>
+    <a class="navlink" href="About.html">About</a>
+    <div class="navitem"><a class="navlink" href="Production.html">Services <span class="chev">⌄</span></a><div class="dropdown"><strong>Our Services</strong><a href="Production.html">All Services</a><a href="TelevisionProduction.html">Film &amp; Television</a><a href="index.html#contact#start-project">Request a Project</a></div></div>
+    <div class="navitem"><a class="navlink" href="TelevisionProduction.html">Production <span class="chev">⌄</span></a><div class="dropdown"><strong>Production</strong><a href="TelevisionProduction.html">Film &amp; Television</a><a href="HaveAStory.html">Share a Project</a></div></div>
+    <a class="navlink" href="SYFM.html">Our Webs</a>
+    <div class="navitem"><a class="navlink active" href="Novel.html" aria-current="page">Our Stories <span class="chev">⌄</span></a><div class="dropdown"><strong>Our Stories</strong><a href="Novel.html" aria-current="page">Novels</a><a href="Songs.html">Songs</a><a href="Tutorials.html">Tutorials</a><a href="HaveAStory.html">Have a Story</a></div></div>
+    <a class="navlink" href="index.html#contact">Contact</a>
+    <a class="start-btn" href="index.html#contact#start-project">Start a Project&nbsp; ↗</a>
+  </nav>
+</header>
+<main>
+  <section class="page-banner">
+    <div class="eyebrow">Shoto Point Production · Our Stories</div>
+    <h1>The SPP Novel Collection</h1>
+    <p>Discover stories shaped by imagination, culture, courage and the human experience. Open a title to read its story, learn about its writer, watch related video content and access its PDF edition.</p>
+  </section>
+  <section class="section" aria-label="Novel catalogue">
+    <div class="catalogue-intro"><div><div class="eyebrow">The written word</div><h2>Stories to read. Worlds to explore.</h2><p>Browse the collection below. Official titles, writers, cover art and publication dates should be entered in the novel catalogue data file.</p></div><div class="count-pill" id="novelCount">Loading collection…</div></div>
+    <div class="toolbar"><label class="searchbox"><span aria-hidden="true">⌕</span><input id="novelSearch" type="search" placeholder="Search by title, writer or genre…" aria-label="Search novels"></label><div class="toolbar-note">Choose <strong>Read More</strong> to open a dedicated reading page.</div></div>
+    <div class="novel-grid" id="novelGrid" aria-live="polite"></div>
+    <div class="empty-state" id="emptyState" hidden>No novels matched your search. Try another title, writer or genre.</div>
+    <div class="site-note"><strong>Catalogue setup note:</strong> The cards currently use clearly marked demonstration entries because the official SPP novel list and manuscripts were not included with the supplied file. Replace the demo records in <code>novels-data.js</code> before publishing the catalogue.</div>
+  </section>
+<section id="sppCmsPageContent" class="spp-cms-slot" hidden></section></main>
+<footer class="footer"><div><b>SHOTO POINT PRODUCTION</b><br>Stories • Visions • Impact</div><div>Film / Television / Storytelling</div><div><a href="About.html">About</a> &nbsp;·&nbsp; <a href="index.html#contact">Contact</a> &nbsp;·&nbsp; <a href="Novel.html">Novels</a></div><div>© <span id="year"></span> Shoto Point Production</div></footer>
+</div>
+<script src="novels-data.js"></script>
+<script>
+(function(){
+ const allBooks = Array.isArray(window.SPP_NOVELS) ? window.SPP_NOVELS : [];
+ const grid = document.getElementById('novelGrid');
+ const search = document.getElementById('novelSearch');
+ const empty = document.getElementById('emptyState');
+ const count = document.getElementById('novelCount');
+ const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+ function dateLabel(book) {
+   if (!book.publishedAt) return 'Publication date not set';
+   const date = new Date(book.publishedAt + (book.publishedAt.length === 10 ? 'T12:00:00' : ''));
+   return Number.isNaN(date.getTime()) ? book.publishedAt : 'Published ' + date.toLocaleDateString(undefined, {year:'numeric',month:'short',day:'numeric'});
+ }
+ function render() {
+   const q = search.value.trim().toLowerCase();
+   const books = allBooks.filter(b => [b.title,b.author,b.genre,b.description].join(' ').toLowerCase().includes(q));
+   count.textContent = books.length + (books.length === 1 ? ' title' : ' titles');
+   empty.hidden = books.length !== 0;
+   grid.innerHTML = books.map(book => `
+     <article class="novel-card">
+       <a href="ReadNovel.html?id=${encodeURIComponent(book.id)}" aria-label="Read ${esc(book.title)}">
+         <div class="cover-wrap"><img class="novel-cover" src="${esc(book.cover || 'action.jpg.png')}" alt="Cover art for ${esc(book.title)}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.background='radial-gradient(circle at 30% 15%,#063d23,#171009 55%,#050505)'"><div class="cover-shade"></div><span class="demo-badge">${book.isDemo ? 'DEMO CONTENT' : 'SPP NOVEL'}</span></div>
+       </a>
+       <div class="novel-card-body">
+         <div class="novel-meta"><span>${esc(dateLabel(book))}</span><span>${esc(book.genre || 'Novel')}</span></div>
+         <h2>${esc(book.title)}</h2>
+         <div class="novel-author">Written by <strong>${esc(book.author || 'Writer to be added')}</strong></div>
+         <p class="novel-desc">${esc(book.description || 'Open this title to read the story and learn more about the writer.')}</p>
+         <div class="card-bottom"><span class="genre">${book.isDemo ? 'Replace with official SPP title' : 'Published by SPP'}</span><a class="btn primary" href="ReadNovel.html?id=${encodeURIComponent(book.id)}">Read More <span aria-hidden="true">→</span></a></div>
+       </div>
+     </article>`).join('');
+ }
+ search.addEventListener('input', render);
+ const toggle = document.getElementById('mobileToggle');
+ const links = document.getElementById('navlinks');
+ if (toggle && links) toggle.addEventListener('click', () => { const open = links.classList.toggle('mobile-open'); toggle.setAttribute('aria-expanded', String(open)); });
+ document.querySelectorAll('.navitem > .navlink').forEach(link => link.addEventListener('click', event => { const dropdown = link.nextElementSibling; if (dropdown && dropdown.classList.contains('dropdown') && window.matchMedia('(max-width: 850px)').matches) { event.preventDefault(); link.parentElement.classList.toggle('open'); } }));
+ document.getElementById('year').textContent = new Date().getFullYear();
+ render();
+})();
+</script>
+<script src="/spp-cms-public.js" data-spp-page="novel"></script><script src="spp-global.js"></script>
+</body>
+</html>

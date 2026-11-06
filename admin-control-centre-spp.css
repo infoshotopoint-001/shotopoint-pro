@@ -1,0 +1,27 @@
+/* Shoto Point Production CMS — SYFM black, green and white identity with navy accents */
+:root{--spp-gold:#00d96b;--spp-gold2:#8effc0;--spp-bg:#070707;--spp-panel:#111;--spp-line:#00d96b40}
+body{background:#060606!important;color:#f5f8f6!important}
+.sidebar,.main,.topbar,.content,.panel,.modal-box,.stat,.card,.table-wrap{background:#0b0b0b!important;color:#f5f8f6!important;border-color:var(--spp-line)!important}
+.sidebar{border-right:1px solid var(--spp-line)!important}
+.brand,.brand strong,.brand-mark,.topbar h1,.hero h2,h2,h3{color:var(--spp-gold2)!important}
+.brand-mark{background:#071a2e!important;border:1px solid var(--spp-gold)!important;box-shadow:0 0 20px #00d96b22}
+.nav-label,.muted,.field small,.stat small,.stat span{color:#aaa!important}
+.nav-item{color:#ddd!important}.nav-item:hover,.nav-item.active{background:#071a2e!important;color:var(--spp-gold2)!important;border-left:3px solid var(--spp-gold)!important}
+button.btn.primary,.btn.primary,.logout,.system-pill{background:linear-gradient(135deg,#00d96b,#0a9f50)!important;color:#090909!important;border:1px solid #8effc0!important}
+.btn,.top-actions button{border:1px solid var(--spp-line)!important;background:#071a2e!important;color:#d2ffe5!important}
+.btn.danger{background:#381818!important;color:#ffb4a8!important;border-color:#8d3b2e!important}
+input,select,textarea,.rich{background:#090909!important;color:#f8f4e9!important;border:1px solid #063d23!important}
+input:focus,select:focus,textarea:focus{outline:1px solid var(--spp-gold)!important}
+table th{background:#071a2e!important;color:var(--spp-gold2)!important}table td{border-bottom:1px solid #ffffff12!important;color:#eee!important}
+.stat strong{color:var(--spp-gold2)!important}.pill.ok{background:#12351e!important;color:#9de5af!important}.pill.warn{background:#063d23!important;color:#8effc0!important}
+.provider-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:16px}.provider-card{padding:16px;background:#101010;border:1px solid var(--spp-line);border-radius:12px}.provider-card p{margin:8px 0;color:#c8c1b4;font-size:12px;line-height:1.5}.provider-card small{color:#9e988c}.provider-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.ai-intro{display:flex;align-items:center;justify-content:space-between;gap:20px;background:radial-gradient(ellipse at top left,#071a2e2e,transparent 60%),#0b0b0b}.ai-intro h2{margin:8px 0;color:var(--spp-gold2)!important}.ai-intro p{max-width:780px;color:#c9c2b7;line-height:1.7}.ai-output{display:block;max-width:100%;max-height:520px;margin-top:14px;border-radius:12px;border:1px solid var(--spp-line)}.ai-result{margin-top:16px}.ai-notes li{margin:8px 0;color:#c9c2b7;line-height:1.6}.error-text{color:#ffb4a8!important}.view{min-width:0}
+@media(max-width:700px){.ai-intro{display:block}.ai-intro .btn{display:inline-block;margin-top:10px}.provider-grid{grid-template-columns:1fr}}
+
+/* Final shared palette correction */
+.sidebar,.main,.topbar,.content,.panel,.modal-box,.stat,.card,.table-wrap{background-color:#071a2e!important}
+.brand-mark{background:#071a2e!important}
+.nav-item:hover,.nav-item.active{background:rgba(0,217,107,.12)!important;color:#8effc0!important}
+.btn,.top-actions button{background:#071a2e!important;color:#f5f8f6!important}
+.btn.primary,.logout,.system-pill{background:linear-gradient(135deg,#00d96b,#0a9f50)!important;color:#030504!important;border-color:#00d96b!important}
+input,select,textarea,.rich{border-color:rgba(0,217,107,.38)!important}
+table th{background:#071a2e!important;color:#8effc0!important}

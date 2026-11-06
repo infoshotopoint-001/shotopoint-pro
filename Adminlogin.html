@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shoto Point Admin Login</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#050505;color:#f7f5ef;font-family:Arial,sans-serif}.card{width:min(440px,92vw);padding:28px;background:#0b0b0b;border:1px solid #00d96b60;border-radius:18px;box-shadow:0 20px 70px #0008}.brand{color:#8effc0;font-size:22px;font-weight:900}.sub{color:#a9b4ae;font-size:12px;margin:5px 0 22px}.field{margin:12px 0}.field label{display:block;color:#8effc0;font-size:10px;text-transform:uppercase;margin-bottom:6px}.input{width:100%;padding:12px;background:#050505;color:#fff;border:1px solid #0a9f50;border-radius:8px}.btn{width:100%;padding:12px;border:0;border-radius:8px;background:#00d96b;color:#050505;font-weight:900;cursor:pointer;margin-top:12px}.msg{min-height:22px;margin-top:12px;font-size:12px;color:#ff9b9f}.hint{color:#a9b4ae;font-size:11px;line-height:1.5;margin-top:14px}
+</style><link rel="stylesheet" href="spp-global-theme.css">
+</head>
+<body>
+<div id="spp-global-preloader" role="status" aria-live="polite" aria-label="Loading Shoto Point Productions"><div class="spp-loader-orbit"><div class="spp-loader-mark">S<span>P</span></div></div><div class="spp-loader-title">SHOTO POINT PRODUCTIONS</div><div class="spp-loader-subtitle">STORIES · VISIONS · IMPACT</div><div class="spp-loader-track"><span></span></div></div>
+<main class="card"><div class="brand">SHOTO POINT</div><div class="sub">PRODUCTIONS LTD · ADMIN CONTROL CENTRE</div>
+<form id="login"><div class="field"><label>Admin ID</label><input class="input" id="adminId" required></div><div class="field"><label>Password</label><input class="input" id="password" type="password" required></div><div class="field"><label>Control Key</label><input class="input" id="controlKey" required></div><button class="btn">Sign In</button></form><div id="msg" class="msg"></div><div class="hint">Sign in to the secure Shoto Point Production CMS. API and database must be configured by the administrator.</div></main>
+<script>
+const API="/api";
+document.querySelector("#login").addEventListener("submit",async e=>{
+ e.preventDefault();const msg=document.querySelector("#msg");const button=e.currentTarget.querySelector('button[type="submit"],button:not([type])');msg.textContent="Signing in...";if(button)button.disabled=true;
+ try{const payload={adminId:document.getElementById('adminId').value.trim(),password:document.getElementById('password').value,controlKey:document.getElementById('controlKey').value.trim()};const r=await fetch(API+"/admin/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});const d=await r.json();if(!r.ok)throw new Error(d.error||"Login failed");localStorage.setItem("adminToken",d.token);localStorage.setItem("adminUser",JSON.stringify(d.profile));location.href="index_admin.html"}catch(err){msg.textContent=err.message}finally{if(button)button.disabled=false;}
+});
+</script><script src="spp-global.js"></script>
+</body></html>
+

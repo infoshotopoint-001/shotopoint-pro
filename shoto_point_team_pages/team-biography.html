@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#03150f">
+  <meta name="description" content="Shoto Point Productions team biography and leadership profile.">
+  <title>Team Biography | Shoto Point Productions</title>
+  <link rel="stylesheet" href="../CEO/biography.css">
+  <link rel="stylesheet" href="../spp-global-theme.css">
+</head>
+<body>
+  <div class="video-bg" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="metadata" poster="../assets/hero-storytelling.jpg">
+      <source src="../assets/business-meeting.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="green-overlay" aria-hidden="true"></div>
+
+  <div id="spp-global-preloader" role="status" aria-live="polite" aria-label="Loading Shoto Point Productions">
+    <div class="spp-loader-orbit"><div class="spp-loader-mark">S<span>P</span></div></div>
+    <div class="spp-loader-title">SHOTO POINT PRODUCTIONS</div>
+    <div class="spp-loader-subtitle">STORIES · VISIONS · IMPACT</div>
+    <div class="spp-loader-track"><span></span></div>
+  </div>
+
+  <main class="shell">
+    <nav class="nav">
+      <a class="brand" href="../index.html">SHOTO POINT <small>PRODUCTIONS</small></a>
+      <a class="back" id="backToTeam" href="administrative.html">← Back to Team</a>
+    </nav>
+
+    <section class="profile" id="teamProfile" aria-live="polite">
+      <div class="photo"><img id="profileImage" src="../assets/team-placeholder.jpg" alt="Team member portrait"></div>
+      <div class="content">
+        <div class="role" id="profileRole">TEAM PROFILE</div>
+        <h1 id="profileName">Loading profile…</h1>
+        <p class="lead" id="profileLead"></p>
+        <section class="bio-section"><h2>Department</h2><p id="profileDepartment"></p></section>
+        <section class="bio-section"><h2>Role & Responsibilities</h2><p id="profileBiography"></p></section>
+        <section class="bio-section"><h2>Working with Shoto Point Productions</h2><p id="profileContribution"></p></section>
+        <div class="actions">
+          <a class="btn primary" id="profileBackButton" href="administrative.html">← Return to Team</a>
+          <a class="btn" href="../index.html">Main Website</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="team-biography.js"></script>
+  <script src="../spp-global.js"></script>
+</body>
+</html>

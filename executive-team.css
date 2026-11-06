@@ -1,0 +1,75 @@
+/* Executive team — matched to the SYFM site palette. */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#00d96b;--green2:#0a9f50;--mint:#8effc0;--white:#f5f8f6;--glass:rgba(7,26,46,.76);--line:rgba(0,217,107,.28);--navy:#071a2e}
+html,body{min-height:100%;font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--white);background:radial-gradient(circle at 80% 15%,rgba(0,217,107,.10),transparent 30%),radial-gradient(circle at 10% 80%,rgba(7,26,46,.72),transparent 38%),#030504}
+body{overflow-x:hidden}
+.video-bg,.green-overlay{position:fixed;inset:0;z-index:-3}
+.video-bg video{width:100%;height:100%;object-fit:cover;filter:brightness(.28) saturate(.72)}
+.green-overlay{z-index:-2;background:linear-gradient(120deg,rgba(3,5,4,.91),rgba(7,26,46,.58),rgba(0,65,38,.38),rgba(3,5,4,.92));backdrop-filter:blur(2px)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 20% 20%,rgba(0,217,107,.10),transparent 30%),radial-gradient(circle at 80% 70%,rgba(7,26,46,.28),transparent 35%)}
+.topbar{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px clamp(20px,6%,80px);border-bottom:1px solid var(--line);background:rgba(3,5,4,.86);backdrop-filter:blur(16px)}
+.brand{color:#fff;text-decoration:none;font-weight:900;letter-spacing:2px;font-size:18px}.brand span{display:block;font-size:9px;color:var(--mint);letter-spacing:4px;margin-top:4px}
+.team-nav-links{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.team-nav-links a{color:#b8c7bf;text-decoration:none;border:1px solid transparent;border-radius:999px;padding:10px 13px;font-size:11px;font-weight:850;letter-spacing:.07em;text-transform:uppercase}.team-nav-links a:hover,.team-nav-links a.active{color:#030504;background:var(--green);border-color:var(--green)}
+.back-link{color:#dffff0;text-decoration:none;border:1px solid var(--line);padding:10px 15px;border-radius:30px;font-size:12px;white-space:nowrap}.back-link:hover{background:rgba(0,217,107,.12)}
+.executive-page{width:min(1180px,90%);margin:auto;padding:76px 0 100px}
+.hero{text-align:center;max-width:850px;margin:0 auto 58px}
+.eyebrow{color:var(--mint);letter-spacing:4px;font-size:12px;font-weight:800;margin-bottom:16px}
+h1{font-size:clamp(42px,6vw,78px);line-height:1.02;margin-bottom:20px}h1 span{color:var(--mint)}
+.intro{color:#c5d1cb;font-size:17px;line-height:1.8}
+.leaders{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;align-items:stretch}
+.leader-card{position:relative;overflow:hidden;min-width:0;min-height:520px;padding:18px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,rgba(7,26,46,.82),rgba(3,15,10,.86));box-shadow:0 25px 70px rgba(0,0,0,.42);backdrop-filter:blur(18px);transition:.35s}
+.leader-card:hover{transform:translateY(-7px);border-color:rgba(0,217,107,.58)}
+.portrait-wrap{height:285px;overflow:hidden;border-radius:19px;background:rgba(255,255,255,.08)}
+.portrait-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.leader-content{padding:25px 12px 14px}.role{font-size:11px;color:var(--mint);font-weight:900;letter-spacing:2px}.leader-content h2{font-size:29px;margin:10px 0 12px}.leader-content p{color:#b8c7bf;line-height:1.7;margin-bottom:24px}
+.read-more{display:inline-flex;gap:12px;align-items:center;color:#030504;background:var(--mint);text-decoration:none;font-weight:900;padding:12px 18px;border-radius:28px}.read-more:hover{background:#fff;transform:translateY(-2px)}.read-more span{font-size:18px}
+@media(max-width:850px){.topbar{align-items:flex-start;flex-direction:column}.team-nav-links{justify-content:flex-start}.leaders{grid-template-columns:1fr}.executive-page{padding-top:50px}.leader-card{min-height:auto}.portrait-wrap{height:260px}}
+
+/* Administrative and Senior Team pages reuse the Executive Team components. */
+.leader-content .team-department {
+  margin: -5px 0 12px;
+  color: var(--mint);
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 850;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.leaders.senior-leaders {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+.leaders.senior-leaders .leader-card {
+  min-height: 500px;
+  padding: 15px;
+}
+.leaders.senior-leaders .portrait-wrap {
+  height: 225px;
+}
+.leaders.senior-leaders .leader-content {
+  padding: 22px 9px 12px;
+}
+.leaders.senior-leaders .leader-content h2 {
+  font-size: 23px;
+  line-height: 1.18;
+}
+.leaders.senior-leaders .leader-content p:not(.team-department) {
+  font-size: 14px;
+  line-height: 1.65;
+}
+.team-footer {
+  padding: 28px 20px 42px;
+  border-top: 1px solid rgba(0,217,107,.16);
+  color: #9aa9a1;
+  text-align: center;
+  font-size: 12px;
+}
+@media (max-width: 1050px) {
+  .leaders.senior-leaders { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .leaders.senior-leaders { grid-template-columns: 1fr; }
+  .leaders.senior-leaders .leader-card { min-height: 0; }
+  .leaders.senior-leaders .portrait-wrap { height: 260px; }
+}

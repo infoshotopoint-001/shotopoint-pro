@@ -1,0 +1,4 @@
+In the existing index.html dropdown menu, change the Have a Story link to:
+<a href="HaveAStory.html">Have a Story</a>
+
+Do not replace the Home page or SYFM page. Copy the community page and companion files into the existing project root.

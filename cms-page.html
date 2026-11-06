@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080a0c">
+<title>Shoto Point Production</title>
+<link rel="stylesheet" href="/spp-cms-live.css">
+<style>
+:root{color-scheme:dark;--gold:#00d96b;--bg:#080a0c;--panel:#111619;--text:#f4f0e7;--muted:#abb3b5}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at top,#1c201f 0,#080a0c 54%);color:var(--text);font:16px/1.65 Arial,sans-serif}.spp-page-header{padding:18px clamp(18px,5vw,72px);border-bottom:1px solid #00d96b3d;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.spp-brand{color:var(--gold);text-decoration:none;font-weight:900;letter-spacing:.14em}.spp-nav{display:flex;gap:16px;flex-wrap:wrap}.spp-nav a{color:#e7e0cf;text-decoration:none;font-size:13px}.spp-nav a:hover{color:var(--gold)}main{width:min(1180px,94%);min-height:65vh;margin:42px auto}.spp-page-title{color:var(--gold);font-size:clamp(26px,4vw,42px);text-transform:capitalize;margin:0 0 18px}.spp-page-intro{color:var(--muted)}.spp-page-footer{padding:28px clamp(18px,5vw,72px);border-top:1px solid #00d96b33;color:#9da6a8;font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.spp-page-footer a{color:var(--gold)}
+</style>
+<link rel="stylesheet" href="spp-global-theme.css">
+</head>
+<body>
+<div id="spp-global-preloader" role="status" aria-live="polite" aria-label="Loading Shoto Point Productions"><div class="spp-loader-orbit"><div class="spp-loader-mark">S<span>P</span></div></div><div class="spp-loader-title">SHOTO POINT PRODUCTIONS</div><div class="spp-loader-subtitle">STORIES · VISIONS · IMPACT</div><div class="spp-loader-track"><span></span></div></div>
+
+<header class="spp-page-header"><a class="spp-brand" href="/index.html">SHOTO POINT PRODUCTION</a><nav class="spp-nav"><a href="/index.html">Home</a><a href="/About.html">About</a><a href="/news.html">Shoto News</a><a href="/SYFM(2).html">SYFM</a><a href="/HaveAStory.html">Contact</a></nav></header>
+<main id="main-content"><h1 class="spp-page-title" id="sppDynamicPageTitle">Shoto Point</h1><p class="spp-page-intro">This page is managed from the Shoto Point Production Admin Control Centre.</p><section id="sppCmsPageContent" class="spp-cms-slot" hidden></section></main>
+<footer class="spp-page-footer"><span>© <span id="sppYear"></span> Shoto Point Production</span><span>Stories · Visions · Impact</span><span><a href="/news.html">Newsroom</a> · <a href="/SYFM(2).html">SYFM</a></span></footer>
+<script>document.getElementById('sppYear').textContent=new Date().getFullYear();const p=new URLSearchParams(location.search).get('page')||'page';document.getElementById('sppDynamicPageTitle').textContent=p.replace(/[-_]+/g,' ');document.title=document.getElementById('sppDynamicPageTitle').textContent+' | Shoto Point Production';</script>
+<script src="/spp-cms-public.js"></script>
+<script src="spp-global.js"></script>
+</body>
+</html>

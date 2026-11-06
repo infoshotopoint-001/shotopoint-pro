@@ -1,0 +1,28 @@
+SHOTO POINT PRODUCTION — ADMIN CONTROL CENTRE V4
+
+1. BACK UP your existing project folder first.
+2. Extract this package into C:\Users\USER\Documents\SHOTO POINT PRO (merge, do not delete existing files).
+3. Keep your original index.html, about.html, contact.html, services.html, team.html, SYFM folder and all SYFM*.html files. They are intentionally not replaced by this package.
+4. Open PowerShell in the project root and run:
+     .\verify-spp-project.ps1
+     npm install
+5. Provision a REMOTE MySQL database; import database\shoto_point_admin.sql into a new/empty database only.
+6. Copy .env.example to .env for local development and fill DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, JWT_SECRET and other values. Never commit .env.
+   For Have a Story, run database\supabase-community-schema.sql in Supabase, set the public project URL/anon key in spp-community-config.js (demoMode=false), and set SUPABASE_URL plus SUPABASE_SERVICE_ROLE_KEY in the server environment for admin approvals.
+7. Create the first admin:
+     npm run admin:create
+8. Configure the same runtime variables in Vercel Project Settings, including remote MySQL and Cloudflare R2. Local uploads default to the ignored project-local uploads folder; Vercel uploads require R2.
+9. Install the page bridge from the project root:
+     Set-ExecutionPolicy -Scope Process Bypass -Force
+     .\install-spp-cms.ps1
+   This makes a backup before updating normal root HTML pages. It intentionally skips Adminlogin.html, admin-control-centre.html, SYFM*.html and the SYFM folder.
+10. Run locally with:
+      npx vercel dev
+    Sign in at /Adminlogin.html and open /admin-control-centre.html.
+11. In Website Menus, click “Install / Reset SPP Menu Structure”. In CMS Content, create content blocks for the relevant section slug and set status to Published. Pages with the CMS bridge refresh menus/content every 15 seconds.
+
+IMPORTANT
+- This is a source package; it has not been deployed to your Vercel project and has no live database, administrator password, R2 credentials or AI provider keys.
+- The source overlay intentionally leaves index.html and SYFM files untouched. Merge rather than replace your whole website folder.
+- Use a remote database and persistent R2/S3-compatible storage in production. Vercel function storage is temporary.
+- Google Flow is an import/export workflow. ChatGPT uses the same OpenAI API key as the OpenAI option. Claude is for text/creative direction in this build. ShotoAI is a future placeholder.

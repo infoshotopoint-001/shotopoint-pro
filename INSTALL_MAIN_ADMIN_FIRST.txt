@@ -1,0 +1,37 @@
+SHOTО POINT PRODUCTION — MAIN ADMIN INSTALL
+
+IMPORTANT: This archive is FLAT. Extract its contents directly into:
+C:\Users\USER\Documents\SHOTO POINT PRO
+
+Do NOT extract into a new nested Shoto_Point_Production_HTML_JS_Node folder.
+The files index_admin.html, style2.css, app2.js, config2.js, server.js and
+package.json must sit together in the same project folder.
+
+MAIN ADMIN FILES
+- index_admin.html : main administrator control centre
+- style2.css       : main admin stylesheet
+- app2.js          : main admin application logic
+- config2.js       : same-origin API configuration
+- server.js        : Express API and safe static-file serving
+
+INSTALL
+1. Stop the old Node server with Ctrl+C in its PowerShell window.
+2. Extract all archive contents directly into the project folder above.
+3. Preserve your existing .env file. This archive does not contain .env.
+4. Open PowerShell and run:
+   cd "$env:USERPROFILE\Documents\SHOTO POINT PRO"
+   Test-Path .\index_admin.html
+   Test-Path .\style2.css
+   Test-Path .\server.js
+   npm start
+5. Open http://127.0.0.1:5000/index_admin.html
+6. Test http://127.0.0.1:5000/api/health
+
+All three Test-Path commands must return True. If npm start reports a startup
+or database/schema error, resolve that first. Do not start another old Node
+server on port 5000. Use Ctrl+C to stop it before starting this project.
+
+SECURITY
+- Never replace or upload your .env file.
+- Never share DB_PASSWORD, JWT_SECRET, admin Control Key or passwords.
+- Keep database and provider credentials server-side.

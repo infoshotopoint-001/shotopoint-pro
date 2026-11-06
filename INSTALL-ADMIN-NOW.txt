@@ -1,0 +1,30 @@
+SHOT O POINT PRODUCTION - MAIN ADMIN FILES
+
+This is a small repair bundle for your existing project folder.
+It contains the intended main Admin design, not the earlier rejected dashboard.
+
+FILES:
+- index_admin.html  Main Admin page
+- style2.css        Main Admin stylesheet
+- app2.js           Main Admin UI logic
+- config2.js        API configuration
+- Adminlogin.html   Login page redirecting to index_admin.html
+- server.js         Express server including safe static-file serving
+
+INSTALL:
+1. Stop the server with Ctrl+C.
+2. Extract ALL files in this ZIP directly into:
+   C:\Users\USER\Documents\SHOTO POINT PRO
+3. Allow these included files to be replaced if Windows asks.
+4. Do NOT replace or delete .env, database files, uploads, or your MySQL data.
+5. In PowerShell:
+   cd "$env:USERPROFILE\Documents\SHOTO POINT PRO"
+   npm start
+6. Open:
+   http://127.0.0.1:5000/index_admin.html
+
+IMPORTANT:
+- Keep the six files in the SAME folder as package.json and server.js.
+- Never extract them into a new nested folder.
+- This bundle does not include .env or any passwords/secrets.
+- API features require the local MySQL database and the app's environment variables to be configured.

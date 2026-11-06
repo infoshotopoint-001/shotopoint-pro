@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.vercel/.env.*
+uploads/
+.spp-cms-backups/
+*.log
+.DS_Store
+Thumbs.db
+database/ca.pem

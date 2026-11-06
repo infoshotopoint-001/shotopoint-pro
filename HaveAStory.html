@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Share your movie ideas, novels, music, tutorials and creative work with the Shoto Point Production community.">
+  <meta name="theme-color" content="#070707">
+  <title>Have a Story? | Shoto Point Production</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Cinzel:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="spp-community.css">
+<link rel="stylesheet" href="/spp-cms-live.css"><link rel="stylesheet" href="spp-global-theme.css">
+</head>
+<body>
+<div id="spp-global-preloader" role="status" aria-live="polite" aria-label="Loading Shoto Point Productions"><div class="spp-loader-orbit"><div class="spp-loader-mark">S<span>P</span></div></div><div class="spp-loader-title">SHOTO POINT PRODUCTIONS</div><div class="spp-loader-subtitle">STORIES · VISIONS · IMPACT</div><div class="spp-loader-track"><span></span></div></div>
+
+  <div class="site-shell">
+    <div class="topline">
+      <div class="brand-note">Film <i>•</i> Television <i>•</i> Stories <i>•</i> Talent</div>
+      <div class="top-actions">
+        <a href="https://www.shotopoint.com" target="_blank" rel="noopener">www.shotopoint.com</a>
+        <button class="text-button" id="authOpenTop" type="button">Sign in / Join</button>
+      </div>
+    </div>
+
+    <header class="mainnav">
+      <a class="brand" href="index.html" aria-label="Shoto Point Production home">
+        <span class="brand-mark">SP</span>
+        <span class="brand-word">SHOTO POINT<small>PRODUCTION</small></span>
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" type="button" aria-expanded="false" aria-controls="navlinks">☰ Menu</button>
+      <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="Production.html">Production</a>
+        <a href="Novel.html">Novels</a>
+        <a href="Songs.html">Songs</a>
+        <a href="Tutorials.html">Tutorials</a>
+        <a class="active" href="HaveAStory.html">Have a Story</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="gold-button nav-cta" id="submitOpenTop" type="button">Share your work <span>↗</span></button>
+    </header>
+
+    <main>
+      <section class="community-hero">
+        <div class="hero-glow"></div>
+        <div class="hero-copy">
+          <div class="eyebrow">THE SPP CREATOR COMMUNITY</div>
+          <h1>Every great production<br><em>begins with a story.</em></h1>
+          <p>Share your imagination with the Shoto Point Production community. Pitch a movie, publish a novel, showcase your music, present a tutorial or meet your next creative collaborator.</p>
+          <div class="hero-actions">
+            <button class="gold-button" id="submitOpenHero" type="button">Submit your story <span>↗</span></button>
+            <a class="outline-button" href="#showcase">Explore the showcase</a>
+          </div>
+          <div class="hero-note"><span class="status-dot"></span> Open to storytellers, creators, performers and educators</div>
+        </div>
+        <div class="hero-art" aria-label="Creative community showcase illustration">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="art-tile tile-film"><span>🎬</span><b>MOVIE<br>STORIES</b><small>PITCH • DEVELOP • PRODUCE</small></div>
+          <div class="art-tile tile-book"><span>✦</span><b>NOVELS &<br>STORY VIDEOS</b><small>WORDS THAT TRAVEL</small></div>
+          <div class="art-tile tile-music"><span>♫</span><b>MUSIC &<br>PERFORMANCE</b><small>LET YOUR SOUND BE HEARD</small></div>
+          <div class="art-tile tile-learn"><span>▶</span><b>LEARN &<br>CREATE</b><small>SHARE YOUR SKILLS</small></div>
+          <div class="art-center"><strong>SP</strong><small>CREATOR<br>NETWORK</small></div>
+        </div>
+      </section>
+
+      <section class="trust-strip">
+        <div><strong>01</strong><span>Share your idea</span></div>
+        <div><strong>02</strong><span>Get reviewed</span></div>
+        <div><strong>03</strong><span>Showcase your work</span></div>
+        <div><strong>04</strong><span>Connect and collaborate</span></div>
+      </section>
+
+      <section class="showcase-section" id="showcase">
+        <div class="section-heading">
+          <div><div class="eyebrow">DISCOVER THE COMMUNITY</div><h2>Creator Showcase</h2><p>Explore ideas and creative work shared by the SPP community.</p></div>
+          <div class="heading-actions"><button class="outline-button" id="messagesOpen" type="button">✉ Messages <span id="messageCount"></span></button><button class="gold-button" id="submitOpenSection" type="button">+ Submit work</button></div>
+        </div>
+
+        <div class="filter-row" role="group" aria-label="Filter showcase by category">
+          <button class="filter-chip active" data-filter="all" type="button">All showcases</button>
+          <button class="filter-chip" data-filter="movie-story" type="button">Movie stories</button>
+          <button class="filter-chip" data-filter="live-pitch" type="button">Live movie pitches</button>
+          <button class="filter-chip" data-filter="novel" type="button">Novels</button>
+          <button class="filter-chip" data-filter="novel-video" type="button">Novel videos</button>
+          <button class="filter-chip" data-filter="song" type="button">Songs / MP3</button>
+          <button class="filter-chip" data-filter="music-video" type="button">Music videos</button>
+          <button class="filter-chip" data-filter="tutorial" type="button">Tutorials</button>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search stories, creators or titles..." aria-label="Search showcase"></label>
+          <label class="sort-box">Sort by <select id="sortSelect"><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></label>
+        </div>
+
+        <div class="demo-notice" id="demoNotice"><strong>Preview mode:</strong> sample showcase cards are displayed until the SPP community database is configured. They are examples, not real member submissions.</div>
+        <div class="showcase-grid" id="showcaseGrid" aria-live="polite">
+          <div class="loading-card">Loading the creator showcase…</div>
+        </div>
+      </section>
+
+      <section class="creator-cta">
+        <div><div class="eyebrow">YOUR VOICE HAS A PLACE HERE</div><h2>Have an idea worth bringing to life?</h2><p>Submit your concept, manuscript, music or lesson. Approved creators can build a public portfolio and connect with collaborators.</p></div>
+        <button class="gold-button" id="joinOpenBottom" type="button">Join the SPP community ↗</button>
+      </section>
+    <section id="sppCmsPageContent" class="spp-cms-slot" hidden></section></main>
+
+    <footer class="footer">
+      <div><b>SHOTO POINT PRODUCTION</b><br><span>Stories • Visions • Impact</span></div>
+      <div>Creator Showcase · Community · Collaboration</div>
+      <div><a href="index.html">Home</a> · <a href="index.html#contact">Contact</a> · <a href="https://www.shotopoint.com" target="_blank" rel="noopener">Website</a></div>
+      <div>© <span id="year"></span> Shoto Point Production</div>
+    </footer>
+  </div>
+
+  <!-- Authentication modal -->
+  <div class="modal-backdrop" id="authModal" hidden>
+    <section class="modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="modal-close" data-close="authModal" aria-label="Close">×</button>
+      <div class="eyebrow">SPP CREATOR COMMUNITY</div><h2 id="authTitle">Welcome to the community</h2>
+      <p class="modal-intro">Sign in or create an account to submit work, comment and connect with other creators.</p>
+      <div class="tab-switch"><button class="active" data-auth-tab="signin" type="button">Sign in</button><button data-auth-tab="signup" type="button">Create account</button></div>
+      <form id="authForm">
+        <div class="field" id="nameField" hidden><label for="authName">Display name</label><input id="authName" autocomplete="name" maxlength="70" placeholder="Your creator name"></div>
+        <div class="field"><label for="authEmail">Email address</label><input id="authEmail" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+        <div class="field"><label for="authPassword">Password</label><input id="authPassword" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters"></div>
+        <button class="gold-button full-button" type="submit" id="authSubmit">Sign in</button>
+        <p class="form-message" id="authMessage" role="status"></p>
+      </form>
+      <p class="fine-print">Creating an account does not automatically grant publishing rights. SPP reviews creator applications before public posting is enabled.</p>
+    </section>
+  </div>
+
+  <!-- Submission modal -->
+  <div class="modal-backdrop" id="submitModal" hidden>
+    <section class="modal wide-modal" role="dialog" aria-modal="true" aria-labelledby="submitTitle">
+      <button class="modal-close" data-close="submitModal" aria-label="Close">×</button>
+      <div class="eyebrow">PITCH • PUBLISH • COLLABORATE</div><h2 id="submitTitle">Submit your creative work</h2>
+      <p class="modal-intro">Choose the type of work you want to showcase. Your submission enters the SPP review queue before it appears publicly.</p>
+      <form id="submissionForm">
+        <div class="form-grid">
+          <div class="field"><label for="postCategory">Submission type *</label><select id="postCategory" required><option value="">Choose a category</option><option value="movie-story">Movie story / screenplay idea</option><option value="live-pitch">Live movie story pitch</option><option value="novel">Novel / written story</option><option value="novel-video">Novel video / book trailer</option><option value="song">Song / MP3</option><option value="music-video">Music video / MP4</option><option value="tutorial">Tutorial / teaching video</option></select></div>
+          <div class="field"><label for="postTitle">Title *</label><input id="postTitle" maxlength="120" required placeholder="Give your work a title"></div>
+          <div class="field full-field"><label for="postSummary">Synopsis / description *</label><textarea id="postSummary" rows="4" maxlength="1800" required placeholder="Tell the community what your work is about, who it is for, and what makes it special..."></textarea></div>
+          <div class="field"><label for="postGenre">Genre / topic</label><input id="postGenre" maxlength="80" placeholder="Drama, romance, documentary, Afrobeats..."></div>
+          <div class="field"><label for="postCredit">Creator credit</label><input id="postCredit" maxlength="80" placeholder="Writer, artist, director or instructor"></div>
+          <div class="field full-field"><label for="postStoryText">Story, screenplay or lyrics excerpt (optional)</label><textarea id="postStoryText" rows="5" maxlength="15000" placeholder="For written stories, movie concepts, screenplay excerpts or original lyrics, add the text you want readers to preview..."></textarea></div>
+          <div class="field"><label for="postCover">Cover artwork (optional)</label><input id="postCover" type="file" accept="image/png,image/jpeg,image/webp"><small>Image cover, up to 5 MB.</small></div>
+          <div class="field"><label for="postLink">Media / YouTube link (optional)</label><input id="postLink" type="url" placeholder="https://... (YouTube, audio or video link)"><small>Use a link you own or are authorised to share. Do not submit private or unauthorised copies.</small></div>
+          <div class="field full-field"><label for="postFile">Upload manuscript, MP3, MP4 or tutorial file (optional)</label><input id="postFile" type="file" accept="image/png,image/jpeg,image/webp,application/pdf,audio/mpeg,audio/mp3,video/mp4,video/webm"><small>Prototype limit: 25 MB per file. Larger media should use a resumable upload service or an authorised hosted link.</small></div>
+          <div class="field full-field"><label for="postContact">Collaboration preference</label><select id="postContact"><option value="comments">Comments on my showcase</option><option value="messages">Allow private messages</option><option value="both">Comments and private messages</option></select></div>
+          <div class="field full-field check-field"><label><input id="rightsCheck" type="checkbox" required> I own this work or have permission to submit and display it. I understand SPP may review, decline or request changes before publication.</label></div>
+        </div>
+        <div class="form-actions"><button type="button" class="outline-button" data-close="submitModal">Cancel</button><button class="gold-button" type="submit" id="submitWorkButton">Send for SPP review ↗</button></div>
+        <p class="form-message" id="submissionMessage" role="status"></p>
+      </form>
+    </section>
+  </div>
+
+  <!-- Post detail and comments -->
+  <div class="modal-backdrop" id="postModal" hidden>
+    <section class="modal wide-modal" role="dialog" aria-modal="true" aria-labelledby="postModalTitle">
+      <button class="modal-close" data-close="postModal" aria-label="Close">×</button>
+      <div id="postDetail"></div>
+      <div class="comments-area"><h3>Community comments</h3><div id="commentsList" class="comments-list"></div>
+        <form id="commentForm" class="comment-form"><input id="commentInput" maxlength="1000" placeholder="Write a respectful comment..." required><button class="gold-button" type="submit">Post comment</button></form>
+        <p class="form-message" id="commentMessage" role="status"></p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Direct messages -->
+  <div class="modal-backdrop" id="chatModal" hidden>
+    <section class="modal chat-modal" role="dialog" aria-modal="true" aria-labelledby="chatTitle">
+      <button class="modal-close" data-close="chatModal" aria-label="Close">×</button>
+      <div class="eyebrow">CREATOR CONNECTIONS</div><h2 id="chatTitle">Your conversations</h2>
+      <p class="modal-intro">Private messages are available to signed-in community members.</p>
+      <div id="chatMessages" class="chat-messages"><div class="empty-state">Choose “Message creator” on a showcase card to start a conversation.</div></div>
+      <form id="chatForm" class="chat-form"><input id="chatInput" maxlength="2000" placeholder="Write a message..." required><button class="gold-button" type="submit">Send</button></form>
+      <p class="form-message" id="chatMessage" role="status"></p>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="spp-community-config.js"></script>
+  <script src="spp-community.js"></script>
+<script src="/spp-cms-public.js" data-spp-page="haveastory"></script><script src="spp-global.js"></script>
+</body>
+</html>
+

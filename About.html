@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Shoto Point Production, our creative vision, production services, and commitment to powerful storytelling.">
+  <title>About Us | Shoto Point Production</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Cinzel:wght@500;600;700;800&display=swap');
+    :root{--gold:#00d96b;--gold2:#8effc0;--ink:#050505;--white:#f7f5ef;--muted:#c8c5be;--line:#00d96b60}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#050505;color:var(--white);font:14px/1.6 'DM Sans',sans-serif;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .shell{width:min(1600px,100%);margin:auto}
+    .topline{min-height:42px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:7px clamp(16px,3vw,44px);border-bottom:1px solid #00d96b26;background:#050505}
+    .brand-note{font-size:12px;letter-spacing:.11em;color:#d2ffe5;text-transform:uppercase}
+    .top-actions,.socials,.portal-links{display:flex;align-items:center;gap:12px}
+    .socials a{display:grid;place-items:center;width:24px;height:24px;color:var(--gold2);font-weight:800;border-radius:50%;transition:.2s}
+    .socials a:hover{background:var(--gold);color:#000;transform:translateY(-2px)}
+    .portal-links{border-left:1px solid var(--line);padding-left:18px;font-size:12px}
+    .portal-links a:hover{color:var(--gold)}
+    .mainnav{position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px clamp(16px,3vw,44px);background:#050505f2;border-bottom:1px solid var(--line)}
+    .logo{display:flex;align-items:center;gap:10px;min-width:240px}
+    .logo-mark{width:54px;height:54px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:Cinzel,serif;font-size:27px;box-shadow:0 0 18px #00d96b3b,inset 0 0 12px #00d96b24}
+    .logo-word{font-family:Cinzel,serif;font-size:clamp(17px,2vw,25px);line-height:1.05;color:var(--gold2);font-weight:800;letter-spacing:-.04em}
+    .logo-word small{display:block;letter-spacing:.35em;font:700 10px 'DM Sans',sans-serif;margin-top:5px;color:var(--gold)}
+    .navlinks{display:flex;align-items:center;justify-content:flex-end;gap:clamp(10px,1.5vw,23px);flex-wrap:wrap}
+    .navitem{position:relative}.navlink{display:inline-flex;align-items:center;gap:6px;padding:10px 0;font-size:13px;font-weight:600;white-space:nowrap;transition:.2s}
+    .navlink:hover,.navitem:focus-within>.navlink{color:var(--gold)}.chev{font-size:10px;color:var(--gold)}
+    .dropdown{display:none;position:absolute;top:100%;left:-14px;min-width:220px;padding:10px;background:#080808f7;border:1px solid var(--gold);box-shadow:0 15px 38px #000b;border-radius:0 0 8px 8px}
+    .navitem:hover .dropdown,.navitem:focus-within .dropdown,.navitem.open .dropdown{display:block}
+    .dropdown strong{display:block;color:var(--gold);padding:8px 10px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    .dropdown a{display:block;padding:8px 10px;border-radius:4px;font-size:12px;color:#f4f0e7}.dropdown a:hover{background:#00d96b1a;color:var(--gold2)}
+    .start-btn{border:1px solid var(--gold);padding:10px 15px;border-radius:6px;color:var(--gold2);white-space:nowrap;font-weight:700}.start-btn:hover{background:var(--gold);color:#080808}
+    .mobile-toggle{display:none;background:none;color:var(--gold);border:1px solid var(--line);padding:8px 11px;border-radius:5px}
+    /* ABOUT PAGE HERO ONLY: image + transparent video + foreground text */
+    .about-page .page-hero{
+      position:relative;
+      isolation:isolate;
+      overflow:hidden;
+      min-height:370px;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      padding:80px 22px;
+      background:#050505;
+      border-bottom:1px solid var(--line);
+    }
+    .about-page .hero-background-image,
+    .about-page .hero-background-video{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      pointer-events:none;
+    }
+    /* Image is the base layer and remains visible through the video. */
+    .about-page .hero-background-image{z-index:0;}
+    /* Lower opacity lets the image show through the moving footage. */
+    .about-page .hero-background-video{z-index:1;opacity:.55;}
+    /* Dark transparent overlay improves text contrast. */
+    .about-page .hero-overlay{
+      position:absolute;
+      inset:0;
+      z-index:2;
+      background:linear-gradient(90deg,rgba(0,0,0,.62),rgba(0,0,0,.22) 50%,rgba(0,0,0,.62)),linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,.12));
+      pointer-events:none;
+    }
+    /* Keep all hero copy visibly above image, video, and overlay. */
+    .about-page .hero-content{
+      position:relative;
+      z-index:3;
+      width:min(100%,1000px);
+      margin:0 auto;
+      color:#fff;
+      text-shadow:0 2px 14px rgba(0,0,0,.8);
+    }
+    .about-page .page-hero:before{
+      content:"";
+      position:absolute;
+      z-index:4;
+      inset:20px;
+      border:1px solid #00d96b40;
+      pointer-events:none;
+    }
+    .eyebrow{color:var(--gold2);letter-spacing:.25em;text-transform:uppercase;font-size:11px;font-weight:800}
+    h1,h2,h3{font-family:Cinzel,serif}h1{font-size:clamp(42px,7vw,78px);line-height:1.04;color:#00d96b;margin:17px 0;text-shadow:0 0 28px #00d96b25}
+    .about-page .page-hero .hero-content p{max-width:760px;margin:0 auto;color:#fff;font-size:clamp(15px,1.6vw,18px);line-height:1.8;text-shadow:0 2px 12px rgba(0,0,0,.9)}
+    .about-page .page-hero .hero-content .eyebrow{color:var(--gold2)}
+    .section{padding:70px clamp(20px,6vw,90px);background:linear-gradient(180deg,#090909,#050505)}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center;max-width:1200px;margin:auto}
+    .section-kicker{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+    .section h2{font-size:clamp(27px,3.3vw,43px);line-height:1.15;color:#8effc0;margin:10px 0 18px}
+    .section p{color:var(--muted);margin:0 0 15px;font-size:15px}
+    .about-panel{padding:30px;border:1px solid var(--line);background:linear-gradient(145deg,#15120b,#090909);position:relative}
+    .about-panel:before{content:"SPP";font-family:Cinzel,serif;font-size:68px;font-weight:800;letter-spacing:.08em;color:#00d96b1c;display:block;line-height:1;margin-bottom:18px}
+    .about-panel h3{color:var(--gold2);font-size:22px;margin:0 0 10px}
+    
+    .values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1200px;margin:48px auto 0}
+    .value-card{padding:24px 22px;border:1px solid #ffffff24;background:#101010;min-height:180px;transition:.25s}
+    .value-card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 8px 25px #00d96b18}
+    .value-number{font-family:Cinzel,serif;color:var(--gold);font-size:13px;letter-spacing:.16em}
+    .value-card h3{color:var(--gold2);font-size:20px;margin:10px 0}.value-card p{font-size:13px;margin:0}
+    .closing{max-width:1000px;margin:auto;text-align:center;padding:46px 25px;border:1px solid var(--line);background:radial-gradient(ellipse at top,#00d96b15,transparent 70%),#090909}
+    .closing h2{margin-top:0}.closing a{display:inline-block;margin-top:10px;border:1px solid var(--gold);padding:12px 20px;border-radius:5px;color:var(--gold2);font-weight:700}.closing a:hover{background:var(--gold);color:#050505}
+    .footer{padding:30px clamp(20px,4vw,50px);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#aaa;font-size:12px}.footer b{color:var(--gold2)}
+    @media(max-width:1100px){.logo{min-width:0}.navlinks{gap:12px}.navlink{font-size:12px}}
+    @media(max-width:850px){.topline{align-items:flex-start}.mainnav{flex-wrap:wrap}.mobile-toggle{display:block;margin-left:auto}.navlinks{display:none;flex-basis:100%;align-items:stretch;flex-direction:column;gap:0;padding-top:10px}.navlinks.mobile-open{display:flex}.navitem{border-top:1px solid #ffffff15}.navlink{width:100%;justify-content:space-between;padding:12px 3px}.dropdown{position:static;box-shadow:none;border-radius:5px;margin-bottom:10px;width:100%;min-width:0}.start-btn{display:inline-block;margin:10px 0}.about-grid{grid-template-columns:1fr}.values{grid-template-columns:1fr 1fr}}
+    @media(max-width:520px){.topline{flex-direction:column;gap:8px}.top-actions{width:100%;justify-content:space-between}.logo-mark{width:44px;height:44px}.logo-word{font-size:17px}.about-page .page-hero{min-height:330px;padding:65px 20px}.section{padding-top:48px;padding-bottom:48px}.values{grid-template-columns:1fr}.about-panel{padding:23px}}
+
+    @media(prefers-reduced-motion:reduce){.about-page .hero-background-video{display:none}}
+  
+
+    /* About-page feature rows: every creative topic has its own matching about panel. */
+    .about-page .about-features-intro{max-width:1200px;margin:0 auto 34px;}
+    .about-page .about-features-intro h2{font-size:clamp(28px,3.5vw,44px);line-height:1.15;color:#8effc0;margin:10px 0 12px;}
+    .about-page .about-features-intro p{max-width:760px;color:var(--muted);margin:0;font-size:15px;}
+    .about-page .about-features{display:grid;gap:24px;max-width:1200px;margin:0 auto;}
+    .about-page .about-feature{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:stretch;gap:24px;}
+    .about-page .about-feature:nth-child(even) .feature-copy{order:2;}
+    .about-page .about-feature:nth-child(even) .about-panel{order:1;}
+    .about-page .about-feature .feature-copy{width:100%;margin:0;padding:28px 10px 28px 0;text-align:left;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;}
+    .about-page .feature-copy .eyebrow{color:var(--gold2);letter-spacing:.2em;}
+    .about-page .feature-copy .feature-title{font-family:Cinzel,serif;font-size:clamp(30px,4.5vw,54px);line-height:1.02;font-weight:800;color:#00d96b;margin:15px 0 12px;text-shadow:0 0 24px #00d96b25;}
+    .about-page .feature-copy .feature-title span{display:block;color:#d2ffe5;font-size:.58em;letter-spacing:.16em;margin-top:10px;}
+    .about-page .feature-copy .tagline{color:#d2ffe5;font-size:11px;font-weight:700;letter-spacing:.16em;line-height:1.8;margin:7px 0 16px;}
+    .about-page .feature-copy h3{font-family:'DM Sans',sans-serif;color:#fff;font-size:clamp(18px,2vw,24px);line-height:1.35;margin:0 0 10px;}
+    .about-page .feature-copy h3 em{color:var(--gold2);font-style:normal;}
+    .about-page .feature-copy p{color:var(--muted);font-size:15px;max-width:630px;margin:0 0 20px;}
+    .about-page .feature-copy .hero-cta{display:inline-flex;align-items:center;gap:10px;padding:11px 17px;border:1px solid var(--gold);border-radius:5px;color:var(--gold2);font-weight:700;transition:.2s;}
+    .about-page .feature-copy .hero-cta:hover{background:var(--gold);color:#050505;}
+    .about-page .about-feature .about-panel{align-self:stretch;display:flex;flex-direction:column;justify-content:center;min-height:250px;padding:30px;}
+    .about-page .about-feature .about-panel h3{margin:0 0 9px;}
+    .about-page .about-feature .about-panel p{font-size:14px;line-height:1.75;margin:0 0 18px;color:var(--muted);}
+    .about-page .about-feature .about-panel p:last-child{margin-bottom:0;}
+    @media(max-width:850px){.about-page .about-feature{grid-template-columns:1fr;gap:14px}.about-page .about-feature:nth-child(even) .feature-copy,.about-page .about-feature:nth-child(even) .about-panel{order:initial}.about-page .about-feature .feature-copy{padding:22px 0 8px}.about-page .about-feature .about-panel{min-height:0;padding:25px}}
+
+  </style>
+<link rel="stylesheet" href="/spp-cms-live.css"><link rel="stylesheet" href="spp-global-theme.css">
+</head>
+<body class="about-page">
+<div id="spp-global-preloader" role="status" aria-live="polite" aria-label="Loading Shoto Point Productions"><div class="spp-loader-orbit"><div class="spp-loader-mark">S<span>P</span></div></div><div class="spp-loader-title">SHOTO POINT PRODUCTIONS</div><div class="spp-loader-subtitle">STORIES · VISIONS · IMPACT</div><div class="spp-loader-track"><span></span></div></div>
+
+  <div class="shell">
+    <div class="topline">
+      <div class="brand-note">Stories that move people. Production that makes them matter.</div>
+      <div class="top-actions">
+        <div class="socials" aria-label="Social media"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a></div>
+        <div class="portal-links"><a href="mailto:info@shotopoint.com">Email us</a></div>
+      </div>
+    </div>
+    <nav class="mainnav" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Shoto Point Production home"><span class="logo-mark">S</span><span class="logo-word">SHOTO POINT<small>PRODUCTION</small></span></a>
+      <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="navlinks">☰ Menu</button>
+      <div class="navlinks" id="navlinks">
+        <div class="navitem"><a class="navlink" href="index.html">Home</a></div>
+        <div class="navitem"><a class="navlink" href="About.html" aria-current="page">About</a></div>
+        <div class="navitem"><a class="navlink" href="Production.html">Services <span class="chev">▾</span></a><div class="dropdown"><strong>Our Services</strong><a href="Production.html">All Services</a><a href="FilmProduction.html">Film Production</a><a href="Photography.html">Photography</a><a href="Production.html">Audio Production</a><a href="DigitalMedia.html">Creative Media</a></div></div>
+        <div class="navitem"><a class="navlink" href="Production.html">Production <span class="chev">▾</span></a><div class="dropdown"><strong>Production</strong><a href="Production.html">Production Overview</a><a href="FilmProduction.html">Films &amp; Videos</a><a href="Documentary.html">Documentaries</a></div></div>
+        <div class="navitem"><a class="navlink" href="executive-team.html">Teams <span class="chev">▾</span></a><div class="dropdown"><strong>Meet the Team</strong><a href="executive-team.html">Executive Team</a><a href="shoto_point_team_pages/administrative.html">Administrative Team</a><a href="shoto_point_team_pages/senior-teams.html">Senior Team</a></div></div>
+        <div class="navitem"><a class="navlink" href="SYFM.html">Our Websites <span class="chev">▾</span></a><div class="dropdown"><strong>Our Websites</strong><a href="SYFM.html">Website Directory</a><a href="OurNews.html">Our News</a><a href="SYFM.html">SYFM</a></div></div>
+        <div class="navitem"><a class="navlink" href="OurStories.html">Our Stories <span class="chev">▾</span></a><div class="dropdown"><strong>Explore Stories</strong><a href="Novel.html">Novels</a><a href="Songs.html">Songs</a><a href="Tutorials.html">Tutorials</a><a href="HaveAStory.html">Share Your Story</a></div></div>
+        <div class="navitem"><a class="navlink" href="index.html#contact">Contact</a></div>
+      </div>
+      <a class="start-btn" href="index.html#contact">Work With Us ↗</a>
+    </nav>
+
+
+    <!-- About-page cinematic hero. The background layers are limited to About.html. -->
+    <header class="page-hero">
+      <img class="hero-background-image" src="assets/about-hero.jpg" alt="" aria-hidden="true">
+      <video class="hero-background-video" autoplay muted loop playsinline preload="metadata" poster="assets/about-hero.jpg" aria-hidden="true">
+        <source src="assets/business-meeting.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow">Who We Are · What We Create</div>
+        <h1>About Shoto Point<br>Production</h1>
+        <p>We bring ideas to life through thoughtful storytelling, creative production, and visual experiences designed to connect with people.</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- Company introduction and core About panel -->
+      <section class="section" id="our-story">
+        <div class="about-grid">
+          <div>
+            <div class="section-kicker">Our Story</div>
+            <h2>Creativity with purpose.<br>Stories with impact.</h2>
+            <p>Shoto Point Production is a creative production brand built around the power of stories. We aim to turn ideas, people, and experiences into clear, engaging productions that audiences can see, hear, and remember.</p>
+            <p>From planning and development to production and presentation, our approach brings creative thinking and practical execution together. Every project begins with understanding its purpose, its audience, and the message it needs to communicate.</p>
+            <p>Our work is guided by a simple belief: strong production is more than attractive images or sound. It is about creating meaning, building connection, and delivering work with care.</p>
+          </div>
+          <aside class="about-panel">
+            <h3>Our Purpose</h3>
+            <p>To develop compelling creative work that informs, entertains, inspires, and helps meaningful ideas reach their audience.</p>
+            <h3>Our Vision</h3>
+            <p>To grow into a trusted production house recognised for creativity, professionalism, collaboration, and memorable storytelling.</p>
+            <h3>Our Commitment</h3>
+            <p>To approach every brief with curiosity, respect, consistency, and attention to detail—from the first conversation to the final delivery.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Each creative topic is paired with its own About panel. -->
+      <section class="section" id="creative-capabilities">
+        <div class="about-features-intro">
+          <div class="section-kicker">What We Create</div>
+          <h2>Our creative world, from idea to screen.</h2>
+          <p>Explore the different ways Shoto Point Production develops stories, crafts visual experiences, and connects with audiences.</p>
+        </div>
+
+        <div class="about-features">
+          <article class="about-feature" id="film-television-documentary">
+            <div class="hero-content feature-copy">
+              <div class="eyebrow">Film • Television • Documentary</div>
+              <h2 class="feature-title">FROM IDEA <span>TO SCREEN</span></h2>
+              <div class="tagline">VISION • CRAFT • IMPACT</div>
+              <h3>Creative work with <em>something to say.</em></h3>
+              <p>Film production, television, documentaries, photography, commercials and digital storytelling under one creative roof.</p>
+              <a class="hero-cta" href="Production.html">See Our Services <span aria-hidden="true">→</span></a>
+            </div>
+            <aside class="about-panel">
+              <h3>Our Production Focus</h3>
+              <p>We turn creative ideas into purposeful visual productions, from initial concepts and planning to filming, editing and final presentation.</p>
+              <h3>Our Approach</h3>
+              <p>Every project begins with its message and audience, then develops through collaboration, careful preparation and thoughtful execution.</p>
+            </aside>
+          </article>
+
+          <article class="about-feature" id="movie-adventures">
+            <div class="hero-content feature-copy">
+              <div class="eyebrow">Beyond the Ordinary</div>
+              <h2 class="feature-title">MOVIE <span>ADVENTURES</span></h2>
+              <div class="tagline">BOLD JOURNEYS • NEW WORLDS • BIG EMOTIONS</div>
+              <h3>Go further. <em>Feel every frame.</em></h3>
+              <p>We shape immersive visual experiences that invite audiences into compelling stories, memorable places and powerful moments.</p>
+              <a class="hero-cta" href="FilmProduction.html">Discover Our Stories <span aria-hidden="true">→</span></a>
+            </div>
+            <aside class="about-panel">
+              <h3>Our Storytelling Approach</h3>
+              <p>We bring together visual imagination, purposeful pacing and considered production choices to make each story feel engaging and complete.</p>
+              <h3>What Matters</h3>
+              <p>Every shot should serve the story—building atmosphere, revealing character or helping the audience feel part of the journey.</p>
+            </aside>
+          </article>
+
+          <article class="about-feature" id="human-stories">
+            <div class="hero-content feature-copy">
+              <div class="eyebrow">People • Culture • Perspective</div>
+              <h2 class="feature-title">STORIES THAT <span>STAY WITH YOU</span></h2>
+              <div class="tagline">REAL VOICES • TRUE FEELINGS • LASTING IMPACT</div>
+              <h3>Every voice has <em>a story.</em></h3>
+              <p>We tell human stories with honesty, imagination and a distinctly African point of view.</p>
+              <a class="hero-cta" href="HaveAStory.html">Share Your Story <span aria-hidden="true">→</span></a>
+            </div>
+            <aside class="about-panel">
+              <h3>People at the Centre</h3>
+              <p>Our stories make room for real perspectives, community experiences and the cultural details that give each narrative its character.</p>
+              <h3>Our Commitment to Audiences</h3>
+              <p>We aim to communicate with respect, clarity and authenticity, creating work that audiences can relate to and remember.</p>
+            </aside>
+          </article>
+
+          <article class="about-feature" id="art-of-filmmaking">
+            <div class="hero-content feature-copy">
+              <div class="eyebrow">Behind Every Frame</div>
+              <h2 class="feature-title">THE ART OF <span>FILMMAKING</span></h2>
+              <div class="tagline">CAMERAS • CREW • CREATION</div>
+              <h3>Made with vision. <em>Crafted with purpose.</em></h3>
+              <p>We value the people, planning and production process that turn an initial concept into a finished film.</p>
+              <a class="hero-cta" href="Production.html">Explore Our Craft <span aria-hidden="true">→</span></a>
+            </div>
+            <aside class="about-panel">
+              <h3>Preparation Meets Craft</h3>
+              <p>Research, planning, crew coordination, filming, sound, editing and review all contribute to a coherent final production.</p>
+              <h3>Attention to Detail</h3>
+              <p>We aim for thoughtful choices at every stage so that the visual language, sound and story work together.</p>
+            </aside>
+          </article>
+
+          <article class="about-feature" id="stories-in-motion">
+            <div class="hero-content feature-copy">
+              <div class="eyebrow">Shoto Point Production</div>
+              <h2 class="feature-title">STORIES IN <span>MOTION</span></h2>
+              <div class="tagline">STORIES • VISIONS • IMPACT</div>
+              <h3>Bringing stories to <em>the screen.</em></h3>
+              <p>We develop cinematic ideas and creative productions designed to communicate clearly and leave a lasting impression.</p>
+              <a class="hero-cta" href="Production.html">Explore Our Productions <span aria-hidden="true">→</span></a>
+            </div>
+            <aside class="about-panel">
+              <h3>From Concepts to Connections</h3>
+              <p>We help shape the central idea, determine how it should be told, and translate it into a production that fits its intended audience.</p>
+              <h3>Our Creative Standard</h3>
+              <p>Purpose, visual consistency and clear communication guide the work from the first conversation to delivery.</p>
+            </aside>
+          </article>
+
+          <article class="about-feature" id="stories-in-action">
+            <div class="hero-content feature-copy">
+              <div class="eyebrow">Stories in Action</div>
+              <h2 class="feature-title">ACTION <span>DRAMA • ADVENTURE</span></h2>
+              <div class="tagline">ENERGY • EMOTION • EXPERIENCE</div>
+              <h3>Every moment deserves <em>the big screen.</em></h3>
+              <p>From dramatic scenes to adventurous narratives, we bring creative concepts to life through thoughtful production.</p>
+              <a class="hero-cta" href="FilmProduction.html">Explore Films &amp; Videos <span aria-hidden="true">→</span></a>
+            </div>
+            <aside class="about-panel">
+              <h3>Range and Flexibility</h3>
+              <p>Different stories need different visual approaches. We consider pace, tone, performance and setting to support the intended experience.</p>
+              <h3>One Creative Purpose</h3>
+              <p>Whatever the format, the goal is to make each production engaging, well considered and clear in its message.</p>
+            </aside>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="our-values">
+        <div class="values">
+          <article class="value-card"><span class="value-number">01 / CREATIVITY</span><h3>Fresh Thinking</h3><p>We look for the central idea and shape it into an original, audience-focused creative direction.</p></article>
+          <article class="value-card"><span class="value-number">02 / CRAFT</span><h3>Professional Delivery</h3><p>We value preparation, clear communication, technical care, and consistency throughout a project.</p></article>
+          <article class="value-card"><span class="value-number">03 / CONNECTION</span><h3>Stories That Matter</h3><p>We work to make each production purposeful, accessible, and meaningful to the people it serves.</p></article>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0">
+        <div class="closing">
+          <div class="section-kicker">Let’s Create Together</div>
+          <h2>Have a story worth telling?</h2>
+          <p>Tell us about your idea, project, or production goals. Let’s explore how we can bring it to life.</p>
+          <a href="index.html#contact">Contact Shoto Point Production ↗</a>
+        </div>
+      </section>
+    <section id="sppCmsPageContent" class="spp-cms-slot" hidden></section></main>
+
+
+    <footer class="footer"><div><b>SHOTO POINT PRODUCTION</b><br>Creative vision. Thoughtful production.</div><div>© <span id="year"></span> Shoto Point Production. All rights reserved.</div><div><a href="About.html">About</a> &nbsp;·&nbsp; <a href="Production.html">Services</a> &nbsp;·&nbsp; <a href="index.html#contact">Contact</a></div></footer>
+  </div>
+    <script>
+    const toggle=document.getElementById('mobileToggle');
+    const links=document.getElementById('navlinks');
+    toggle.addEventListener('click',()=>{const open=links.classList.toggle('mobile-open');toggle.setAttribute('aria-expanded',String(open));});
+    document.querySelectorAll('.navitem > .navlink').forEach(link=>{link.addEventListener('click',event=>{const dropdown=link.nextElementSibling;if(dropdown&&dropdown.classList.contains('dropdown')&&window.matchMedia('(max-width: 850px)').matches){event.preventDefault();link.parentElement.classList.toggle('open');}})});
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+<script src="/spp-cms-public.js" data-spp-page="about"></script><script src="spp-global.js"></script>
+</body>
+</html>
+

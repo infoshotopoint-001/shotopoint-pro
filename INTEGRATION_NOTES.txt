@@ -1,0 +1,14 @@
+SPP NEWSROOM - QUICK INTEGRATION NOTES
+
+1. Replace the old news.html with the package news.html.
+2. Add spp-newsroom-router.cjs to the existing Node/Express project.
+3. npm install rss-parser
+4. Mount before the existing 404 handler:
+   const { createNewsroomRouter } = require('./spp-newsroom-router.cjs');
+   app.use('/api', createNewsroomRouter({ requireAdmin: EXISTING_ADMIN_AUTH_MIDDLEWARE }));
+5. Remove/replace any previous GET /api/public/newsroom route to avoid conflict.
+6. Configure SPP_YOUTUBE_CHANNEL_ID for the official SPP channel.
+7. Keep BBC_RSS_LICENSED=false and FOX_RSS_LICENSED=false unless the needed permission/licence has been secured.
+8. For Vercel/serverless production, swap data/spp-news.json for the existing database or other persistent store.
+
+No provider API keys or database credentials are included. The front-end only displays credited headlines/excerpts and links to the publisher's original story; it does not reproduce full articles.
